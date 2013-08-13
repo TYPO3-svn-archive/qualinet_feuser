@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-08-13T14:01:10Z" product-name="qualinet_feuser">
+		<header/>
+		<body>
+
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser">
+				<source>Feuser</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_vereinsnummer">
+				<source>Vereinsnummer</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_uebungsleiterid">
+				<source>Übungsleiternummer</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_kontonr">
+				<source>Kontonummer</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_blz">
+				<source>Bankleitzahl</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_bankname">
+				<source>Bankname</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_bankeinzug">
+				<source>Bankeinzug</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_strasse">
+				<source>Straße</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_zusatz">
+				<source>Zusatz</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_strassearbeit">
+				<source>Straße Arbeit</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_gesperrt">
+				<source>gesperrt</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_stadtarbeit">
+				<source>Stadt Arbeit</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_kontaktnr">
+				<source>Kontakt Nr.</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_email2">
+				<source>EMail 2</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_emailarbeit">
+				<source>EMail Arbeit</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_blsvmitarbeiter">
+				<source>BLSV Mitarbeiter</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_faxarbeit">
+				<source>Fax Arbeit</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_mobil">
+				<source>Mobil</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_referentennr">
+				<source>Referenten Nr.</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_pager">
+				<source>Pager</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_telprivat">
+				<source>Telefon Privat</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_telarbeit">
+				<source>Telefon Arbeit</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_plzarbeit">
+				<source>PLZ Arbeit</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_beschreibung">
+				<source>Beschreibung</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_refvertragversendet">
+				<source>Referent Vertrag versendet</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_beschreibungkurz">
+				<source>Beschreibung kurz</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_umsatzsteuerid">
+				<source>Umsatzsteuer Id</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_kreditorid">
+				<source>Kreditor Id</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_durchwahl">
+				<source>Durchwahl</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_teilnehmerid">
+				<source>Teilnehmer Id</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_iban">
+				<source>IBAN</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_swift">
+				<source>Swift</source>
+			</trans-unit>
+
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_mailsvondritten"><source>Mails von Dritten</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_blsvwerbung"><source>BLSV Werbung</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_datenschutz"><source>Datenschutz</source></trans-unit>
+
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_mailsvondritten_text"><source>Ja, ich möchte Mails von Dritten erhalten</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_blsvwerbung_text"><source>Ja, ich möchte Werbung vom BLSV erhalten</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_datenschutz_text"><source>Die AGB, Datenschutzbestimmungen und die Widerrufsbelehrung habe ich zur Kenntnis genommen</source></trans-unit>
+
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_ehrenamt"><source>Ehrenamt</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_hauptamt"><source>Hauptamt</source></trans-unit>
+
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.username">
+				<source>Benutzername</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.gender"><source>Anrede</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.gender_0"><source>Herr</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.gender_1"><source>Frau</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.gender_99"><source></source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.first_name">
+				<source>Vorname</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.last_name">
+				<source>Nachname</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.date_of_birth"><source>Geburtstag</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.email">
+				<source>E-Mail</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.address">
+				<source>Addresse</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.city">
+				<source>Ort</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.zip">
+				<source>Postleitzahl</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.telephone">
+				<source>Telefon</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.fax">
+				<source>Fax</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.title">
+				<source>Titel</source>
+			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.country">
+				<source>Länder-/Regionscode</source>
+			</trans-unit>
+			
+		</body>
+	</file>
+</xliff>

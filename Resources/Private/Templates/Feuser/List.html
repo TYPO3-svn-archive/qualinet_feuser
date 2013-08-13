@@ -1,0 +1,132 @@
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+<h1>Listing for Feuser</h1>
+
+<f:flashMessages />
+
+<table  class="tx_qualinetfeuser" >
+	<tr>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_vereinsnummer" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_uebungsleiterid" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_kontonr" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_blz" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_bankname" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_mailsvondritten" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_bankeinzug" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_strasse" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_zusatz" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_strassearbeit" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_gesperrt" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_stadtarbeit" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_kontaktnr" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_email2" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_emailarbeit" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_blsvmitarbeiter" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_faxarbeit" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_mobil" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_referentennr" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_pager" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_telprivat" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_telarbeit" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_plzarbeit" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_beschreibung" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_refvertragversendet" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_beschreibungkurz" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_umsatzsteuerid" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_kreditorid" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_durchwahl" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_teilnehmerid" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_iban" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_swift" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_blsvwerbung" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_ehrenamt" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_hauptamt" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_datenschutz" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.username" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.gender" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.first_name" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.last_name" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.date_of_birth" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.email" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.address" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.city" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.zip" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.telephone" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.fax" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.title" /></th>
+		<th><f:translate key="tx_qualinetfeuser_domain_model_feuser.country" /></th>
+		<th> </th>
+		<th> </th>
+	</tr>
+
+	<f:for each="{feusers}" as="feuser">
+		<tr>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserVereinsnummer}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserUebungsleiterid}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserKontonr}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserBlz}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserBankname}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserMailsvondritten}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserBankeinzug}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserStrasse}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserZusatz}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserStrassearbeit}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserGesperrt}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserStadtarbeit}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserKontaktnr}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserEmail2}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserEmailarbeit}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserBlsvmitarbeiter}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserFaxarbeit}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserMobil}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserReferentennr}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserPager}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserTelprivat}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserTelarbeit}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserPlzarbeit}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserBeschreibung}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserRefvertragversendet}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserBeschreibungkurz}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserUmsatzsteuerid}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserKreditorid}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserDurchwahl}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserTeilnehmerid}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserIban}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserSwift}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserBlsvwerbung}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserEhrenamt}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserHauptamt}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.txQualinetfeuserDatenschutz}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.username}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.gender}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.firstName}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.lastName}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.dateOfBirth -> f:format.date()}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.email}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.address}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.city}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.zip}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.telephone}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.fax}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.title}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{feuser : feuser}"> {feuser.country}</f:link.action></td>
+			<td><f:link.action action="edit" arguments="{feuser : feuser}">Edit</f:link.action></td>
+			<td><f:link.action action="delete" arguments="{feuser : feuser}">Delete</f:link.action></td>
+		</tr>
+	</f:for>
+</table>
+
+<f:link.action action="new">New Feuser</f:link.action>
+</f:section>

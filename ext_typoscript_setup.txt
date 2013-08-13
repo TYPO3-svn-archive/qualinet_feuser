@@ -1,0 +1,20 @@
+config.tx_extbase{
+    persistence{
+        classes{
+
+            TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
+                subclasses {
+                    0 = BLSV\QualinetFeuser\Domain\Model\Feuser
+					
+          		}
+            }
+            BLSV\QualinetFeuser\Domain\Model\Feuser {
+                mapping {
+                    tableName = fe_users
+                    recordType = 0
+                }
+            }
+            
+    	}
+    }
+}
