@@ -12,26 +12,50 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="main">
-<h3>Stammdaten ändern (neu)</h3>
+<h3><f:translate key="tx_qualinetfeuser_domain_model_feuser.titel_stammdaten" /></h3>
 
 <f:flashMessages />
-
-<f:render partial="FormErrors" arguments="{object:Feuser}"/>
+<div class="error"><f:render partial="FormErrors" arguments="{object:Feuser}"/></div>
 
 <div class="tx-keuserregister-pi1">
-
 	<f:form action="update" name="feuser" object="{feuser}" >
+<f:comment><f:debug>{feuser}</f:debug></f:comment>
 	
-		<f:comment>
-		<f:render partial="Feuser/FormFields" arguments="{feuser:feuser}" />
-		</f:comment>
+	<f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_referentennr" /><f:form.textfield property="txQualinetfeuserReferentennr" />
+	<br />
 
-		
-		<f:render partial="Feuser/FormFieldsStammdaten" arguments="{feuser:feuser}" />
-		
-		<f:comment>
-		<f:render partial="Feuser/FormFieldsReferent" arguments="{feuser:feuser}" />
-		</f:comment>
+<f:comment>
+<label for="freigabefahrgemeinschaft">
+	<f:translate key="tx_qualinetfeuser_domain_model_feuser.freigabefahrgemeinschaft" />
+</label>
+	<f:form.checkbox property="freigabefahrgemeinschaft" value="1" /><br />
+
+<label for="zustimmungagb">
+	<f:translate key="tx_qualinetfeuser_domain_model_feuser.zustimmungagb" />
+</label>
+	<f:form.checkbox property="zustimmungagb" value="1" /><br />
+
+<label for="passbild">
+	<f:translate key="tx_qualinetfeuser_domain_model_feuser.passbild" />
+</label>
+	<f:form.upload property="passbild" /><br />
+
+<label for="checkrichtigkeit">
+	<f:translate key="tx_qualinetfeuser_domain_model_feuser.checkrichtigkeit" />
+</label>
+	<f:form.checkbox property="checkrichtigkeit" value="1" /><br />
+
+<label for="datumrichtigkeit">
+	<f:translate key="tx_qualinetfeuser_domain_model_feuser.datumrichtigkeit" />
+</label>
+	<f:form.textfield class="datepicker hasDatepicker" property="datumrichtigkeit"  value="{feuser.datumrichtigkeit->f:format.date()}" /><br />	
+</f:comment>	
+
+	
+		<f:if condition="{feuser.txQualinetfeuserReferentennr}">
+			<f:then><f:render partial="Feuser/FormFieldsReferent" arguments="{feuser:feuser}" /></f:then>
+			<f:else><f:render partial="Feuser/FormFieldsStammdaten" arguments="{feuser:feuser}" /></f:else>
+		</f:if>
 
 		<f:form.submit value="Daten absenden" />
 	</f:form>

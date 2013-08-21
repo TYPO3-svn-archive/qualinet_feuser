@@ -134,7 +134,7 @@
 				<source>Email</source>
 			</trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.address">
-				<source>Address</source>
+				<source>Adresse</source>
 			</trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.city">
 				<source>City</source>
@@ -151,13 +151,21 @@
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.title">
 				<source>Title</source>
 			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.country">
-				<source>Country</source>
-			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.country"><source>Länder-/Regionscode</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.company"><source>Vereinsname</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.www"><source>Homepage</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ustidben"><source>USt.IdNr. benötigt:</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ustid"><source>USt.IdNr. benötigt:</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.comments"><source>Kurzbemerkung</source></trans-unit>
+
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.freigabefahrgemeinschaft"><source>Freigabefahrgemeinschaft</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.zustimmungagb"><source>Zustimmungagb</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.passbild"><source>Passbild</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.checkrichtigkeit"><source>Checkrichtigkeit</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.datumrichtigkeit"><source>Datumrichtigkeit</source></trans-unit>
+
 			
-			<trans-unit id="fe_users.tx_extbase_type.Tx_QualinetFeuser_Feuser">
-				<source>qualinet_feuser Feuser</source>
-			</trans-unit>
+			<trans-unit id="fe_users.tx_extbase_type.Tx_QualinetFeuser_Feuser"><source>qualinet_feuser Feuser</source></trans-unit>
 			
 		</body>
 	</file>

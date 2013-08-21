@@ -131,7 +131,7 @@
 				<source>E-Mail</source>
 			</trans-unit>
 			<trans-unit id="address.description">
-				<source>Addresse</source>
+				<source>Adresse</source>
 			</trans-unit>
 			<trans-unit id="city.description">
 				<source>Ort</source>
@@ -148,9 +148,18 @@
 			<trans-unit id="title.description">
 				<source>Titel</source>
 			</trans-unit>
-			<trans-unit id="country.description">
-				<source>Länder-/Regionscode</source>
-			</trans-unit>
+			<trans-unit id="country.description"><source>Länder-/Regionscode</source></trans-unit>
+			<trans-unit id="company.description"><source>Vereinsname</source></trans-unit>
+			<trans-unit id="www.description"><source>Homepage</source></trans-unit>
+			<trans-unit id="ustidben.description"><source>USt.IdNr. benötigt:</source></trans-unit>
+			<trans-unit id="ustid.description"><source>USt.IdNr. benötigt:</source></trans-unit>
+			<trans-unit id="comments.description"><source>Kurzbemerkung</source></trans-unit>
+
+			<trans-unit id="freigabefahrgemeinschaft.description"><source>Datenfreigabe Fahrgemeinschaft</source></trans-unit>
+			<trans-unit id="zustimmungagb.description"><source>Zustimmung AGB</source></trans-unit>
+			<trans-unit id="passbild.description"><source>Passbild</source></trans-unit>
+			<trans-unit id="checkrichtigkeit.description"><source>Mit dem heutigen Datum bestätige ich die Richtigkeit der gemachten Angaben.</source></trans-unit>
+			<trans-unit id="datumrichtigkeit.description"><source>Mit dem heutigen Datum bestätige ich die Richtigkeit der gemachten Angaben.</source></trans-unit>
 		</body>
 	</file>
 </xliff>

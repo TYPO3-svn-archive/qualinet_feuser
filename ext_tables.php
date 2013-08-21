@@ -374,10 +374,8 @@ $tmp_qualinet_feuser_columns = array(
 		'config' => array(
 			'type' => 'input',
 			'size' => 7,
-			'eval' => 'trim',
-//			'eval' => 'date,required',
-			'checkbox' => 1,
-//			'default' => time()
+			'eval' => 'date,required',
+			'default' => time()
 		),
 	),
 	'email' => array(
@@ -452,6 +450,109 @@ $tmp_qualinet_feuser_columns = array(
 			'eval' => 'trim'
 		),
 	),
+	'company' => array(
+		'exclude' => 0,
+		'label' => 'LLL:EXT:qualinet_feuser/Resources/Private/Language/locallang_db.xlf:tx_qualinetfeuser_domain_model_feuser.company',
+		'config' => array(
+			'type' => 'input',
+			'size' => 30,
+			'eval' => 'trim'
+		),
+	),
+	'company' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:qualinet_feuser/Resources/Private/Language/locallang_db.xlf:tx_qualinetfeuser_domain_model_feuser.company',
+			'config' => array(
+					'type' => 'input',
+					'size' => 30,
+					'eval' => 'trim'
+			),
+	),
+	'www' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:qualinet_feuser/Resources/Private/Language/locallang_db.xlf:tx_qualinetfeuser_domain_model_feuser.www',
+			'config' => array(
+					'type' => 'input',
+					'size' => 30,
+					'eval' => 'trim'
+			),
+	),
+	
+	'ustidben' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:qualinet_feuser/Resources/Private/Language/locallang_db.xlf:tx_qualinetfeuser_domain_model_feuser.ustidben',
+			'config' => array(
+					'type' => 'check',
+					'default' => 0
+			),
+	),
+	
+	'ustid' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:qualinet_feuser/Resources/Private/Language/locallang_db.xlf:tx_qualinetfeuser_domain_model_feuser.ustid',
+			'config' => array(
+					'type' => 'input',
+					'size' => 30,
+					'eval' => 'trim'
+			),
+	),
+	'comments' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:qualinet_feuser/Resources/Private/Language/locallang_db.xlf:tx_qualinetfeuser_domain_model_feuser.comments',
+			'config' => array(
+					'type' => 'input',
+					'size' => 30,
+					'eval' => 'trim'
+			),
+	),
+		'freigabefahrgemeinschaft' => array(
+				'exclude' => 0,
+				'label' => 'LLL:EXT:qualinet_feuser/Resources/Private/Language/locallang_db.xlf:tx_qualinetfeuser_domain_model_feuser.freigabefahrgemeinschaft',
+				'config' => array(
+						'type' => 'check',
+						'default' => 0
+				),
+		),
+		'zustimmungagb' => array(
+				'exclude' => 0,
+				'label' => 'LLL:EXT:qualinet_feuser/Resources/Private/Language/locallang_db.xlf:tx_qualinetfeuser_domain_model_feuser.zustimmungagb',
+				'config' => array(
+						'type' => 'check',
+						'default' => 0
+				),
+						),
+		'passbild' => array(
+				'exclude' => 0,
+				'label' => 'LLL:EXT:qualinet_feuser/Resources/Private/Language/locallang_db.xlf:tx_qualinetfeuser_domain_model_feuser.passbild',
+				'config' => array(
+						'type' => 'group',
+						'internal_type' => 'file',
+						'uploadfolder' => 'uploads/tx_qualinetfeuser',
+						'show_thumbs' => 1,
+						'size' => 5,
+						'allowed' => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'],
+						'disallowed' => '',
+				),
+		),
+		'checkrichtigkeit' => array(
+				'exclude' => 0,
+				'label' => 'LLL:EXT:qualinet_feuser/Resources/Private/Language/locallang_db.xlf:tx_qualinetfeuser_domain_model_feuser.checkrichtigkeit',
+				'config' => array(
+						'type' => 'check',
+						'default' => 0
+				),
+						),
+		'datumrichtigkeit' => array(
+				'exclude' => 0,
+				'label' => 'LLL:EXT:qualinet_feuser/Resources/Private/Language/locallang_db.xlf:tx_qualinetfeuser_domain_model_feuser.datumrichtigkeit',
+				'config' => array(
+						'type' => 'input',
+						'size' => 7,
+						'eval' => 'date',
+						'checkbox' => 1,
+						'default' => time()
+				),
+		),		
 );
 
 t3lib_extMgm::addTCAcolumns('fe_users',$tmp_qualinet_feuser_columns);

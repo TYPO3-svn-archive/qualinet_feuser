@@ -125,12 +125,12 @@
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.last_name">
 				<source>Nachname</source>
 			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.date_of_birth"><source>Geburtstag</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.date_of_birth"><source>Geburtsdatum</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.email">
 				<source>E-Mail</source>
 			</trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.address">
-				<source>Addresse</source>
+				<source>Adresse</source>
 			</trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.city">
 				<source>Ort</source>
@@ -147,10 +147,26 @@
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.title">
 				<source>Titel</source>
 			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.country">
-				<source>Länder-/Regionscode</source>
-			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.country"><source>Länder-/Regionscode</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.company"><source>Vereinsname</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.www"><source>Homepage</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ustidben"><source>USt.IdNr. benötigt:</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ustid"><source>USt.IdNr.</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.comments"><source>Kurzbemerkung</source></trans-unit>
+
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.freigabefahrgemeinschaft"><source>Datenfreigabe Fahrgemeinschaft</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.zustimmungagb"><source>Zustimmung AGB</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.passbild"><source>Passbild</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.checkrichtigkeit"><source>Mit dem heutigen Datum bestätige ich die Richtigkeit der gemachten Angaben.</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.datumrichtigkeit"><source>Mit dem heutigen Datum bestätige ich die Richtigkeit der gemachten Angaben.</source></trans-unit>
+
 			
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.titel_stammdaten"><source>Stammdaten ändern</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.titel_stammdaten_teilnehmer"><source>Teilnehmer</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.titel_stammdaten_referent"><source>Referent</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.titel_kommunikation"><source>Kommunikation</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.titel_bankverbindung"><source>Bankverbindung</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.titel_datenschutz"><source>Datenschutz</source></trans-unit>
 		</body>
 	</file>
 </xliff>

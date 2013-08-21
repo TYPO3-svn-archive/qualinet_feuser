@@ -52,6 +52,16 @@ CREATE TABLE fe_users (
 	fax varchar(255) DEFAULT '' NOT NULL,
 	title varchar(255) DEFAULT '' NOT NULL,
 	country varchar(255) DEFAULT '' NOT NULL,
+	
+	company varchar(255) DEFAULT '' NOT NULL,
+	www varchar(255) DEFAULT '' NOT NULL,
+	ustidben tinyint(1) unsigned DEFAULT '0' NOT NULL,
+	ustid varchar(255) DEFAULT '' NOT NULL,
+	freigabefahrgemeinschaft tinyint(1) unsigned DEFAULT '0' NOT NULL,
+	zustimmungagb tinyint(1) unsigned DEFAULT '0' NOT NULL,
+	passbild text NOT NULL,
+	checkrichtigkeit tinyint(1) unsigned DEFAULT '0' NOT NULL,
+	datumrichtigkeit int(11) DEFAULT '0' NOT NULL,
 
 	tx_extbase_type varchar(255) DEFAULT '' NOT NULL,
 

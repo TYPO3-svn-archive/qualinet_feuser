@@ -7,12 +7,12 @@ class VereinsnummerValidator extends \TYPO3\CMS\Extbase\Validation\Validator\Abs
 
     	$this->errors = array();
     	 
-		if (!$vereinsnummer){
-			$this->addError('die Vereinsnummer darf nicht leer sein.', 40213131);
-			return false;
-		}
+   		if (!preg_match('/^([1-7][0-9]{4})?$/', $vereinsnummer, $m)){
+   			$this->addError('Bitte geben Sie eine gültige Vereinsnummer an', time());
+   			return false;
+   		}
+    	
 		return true;
     }
 }
-
 ?>

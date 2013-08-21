@@ -819,5 +819,144 @@ class FeuserTest extends \TYPO3\CMS\Extbase\Tests\Unit\BaseTestCase {
 		);
 	}
 	
+	/**
+	 * @test
+	 */
+	public function getCompanyReturnsInitialValueForString() { }
+
+	/**
+	 * @test
+	 */
+	public function setCompanyForStringSetsCountry() { 
+		$this->fixture->setCompany('Conceived at T3CON10');
+
+		$this->assertSame(
+			'Conceived at T3CON10',
+			$this->fixture->getCompany()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function getWwwReturnsInitialValueForString() { }
+	
+	/**
+	 * @test
+	 */
+	public function setWwwForStringSetsWww() {
+		$this->fixture->setWww('Conceived at T3CON10');
+	
+		$this->assertSame(
+				'Conceived at T3CON10',
+				$this->fixture->getWww()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function getUstidbenReturnsInitialValueForBoolean() { }
+	
+	/**
+	 * @test
+	 */
+	public function setUstidbenForBooleanSetsUstidben() {
+		$this->fixture->setUstbenid(true);
+	
+		$this->assertSame(
+				'true',
+				$this->fixture->getUstidben()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function getUstidReturnsInitialValueForString() { }
+	
+	/**
+	 * @test
+	 */
+	public function setUstidForStringSetsUstid() {
+		$this->fixture->setUstben('Conceived at T3CON10');
+	
+		$this->assertSame(
+				'Conceived at T3CON10',
+				$this->fixture->getUstid()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function getFreigabefahrgemeinschaftReturnsInitialValueForOolean() { }
+	
+	/**
+	 * @test
+	 */
+	public function setFreigabefahrgemeinschaftForOoleanSetsFreigabefahrgemeinschaft() { }
+	
+	/**
+	 * @test
+	 */
+	public function getZustimmungagbReturnsInitialValueForString() { }
+	
+	/**
+	 * @test
+	 */
+	public function setZustimmungagbForStringSetsZustimmungagb() {
+		$this->fixture->setZustimmungagb('Conceived at T3CON10');
+	
+		$this->assertSame(
+				'Conceived at T3CON10',
+				$this->fixture->getZustimmungagb()
+		);
+	}
+	
+	/**
+	 * @test
+	 */
+	public function getPassbildReturnsInitialValueForString() { }
+	
+	/**
+	 * @test
+	 */
+	public function setPassbildForStringSetsPassbild() {
+		$this->fixture->setPassbild('Conceived at T3CON10');
+	
+		$this->assertSame(
+				'Conceived at T3CON10',
+				$this->fixture->getPassbild()
+		);
+	}
+	
+	/**
+	 * @test
+	 */
+	public function getCheckrichtigkeitReturnsInitialValueForString() { }
+	
+	/**
+	 * @test
+	 */
+	public function setCheckrichtigkeitForStringSetsCheckrichtigkeit() {
+		$this->fixture->setCheckrichtigkeit('Conceived at T3CON10');
+	
+		$this->assertSame(
+				'Conceived at T3CON10',
+				$this->fixture->getCheckrichtigkeit()
+		);
+	}
+	
+	/**
+	 * @test
+	 */
+	public function getDatumrichtigkeitReturnsInitialValueForDateTime() { }
+	
+	/**
+	 * @test
+	 */
+	public function setDatumrichtigkeitForDateTimeSetsDatumrichtigkeit() { }
+	
 }
 ?>

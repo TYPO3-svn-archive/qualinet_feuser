@@ -194,3 +194,24 @@
 	<f:translate key="tx_qualinetfeuser_domain_model_feuser.country" /> <span class="required">(required)</span>
 </label><br />
 	<f:form.textfield property="country" /><br />
+	
+<label for="freigabefahrgemeinschaft">
+	<f:translate key="tx_qualinetfeuser_domain_model_feuser.freigabefahrgemeinschaft" />
+</label><br />
+	<f:form.checkbox property="freigabefahrgemeinschaft" value="1" /><br />
+<label for="zustimmungagb">
+	<f:translate key="tx_qualinetfeuser_domain_model_feuser.zustimmungagb" />
+</label><br />
+	<f:form.textfield property="zustimmungagb" /><br />
+<label for="passbild">
+	<f:translate key="tx_qualinetfeuser_domain_model_feuser.passbild" />
+</label><br />
+	<f:form.upload property="passbild" /><br />
+<label for="checkrichtigkeit">
+	<f:translate key="tx_qualinetfeuser_domain_model_feuser.checkrichtigkeit" />
+</label><br />
+	<f:form.textfield property="checkrichtigkeit" /><br />
+<label for="datumrichtigkeit">
+	<f:translate key="tx_qualinetfeuser_domain_model_feuser.datumrichtigkeit" />
+</label><br />
+	<f:form.textfield property="datumrichtigkeit"  value="{feuser.datumrichtigkeit->f:format.date()}" /><br />	

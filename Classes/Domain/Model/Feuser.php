@@ -46,6 +46,7 @@ class Feuser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
 	 * Übungsleiterid
 	 *
 	 * @var \string
+	 * @validate BLSV\QualinetFeuser\Domain\Validator\UebungsleiteridValidator
 	 */
 	protected $txQualinetfeuserUebungsleiterid;
 
@@ -284,9 +285,10 @@ class Feuser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
 	 * Datenschutz
 	 *
 	 * @var boolean
+	 * @validate BLSV\QualinetFeuser\Domain\Validator\DatenschutzValidator
 	 */
 	protected $txQualinetfeuserDatenschutz = FALSE;
-
+	
 	/**
 	 * Benutzername
 	 *
@@ -379,12 +381,82 @@ class Feuser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
 	protected $title;
 
 	/**
+	 * Vereinsname
+	 *
+	 * @var \string
+	 */
+	protected $company = '';
+	
+	/**
 	 * Länder-/Regionscode
 	 *
 	 * @var \string
 	 */
-	protected $country;
+	protected $country = '';
 
+	/**
+	 * Homepage
+	 *
+	 * @var \string
+	 */
+	protected $www = '';
+	
+	/**
+	 * UstId benoetigt
+	 *
+	 * @var boolean
+	 */
+	protected $ustidben = false;
+	
+	/**
+	 * UstId
+	 *
+	 * @var \string
+	 */
+	protected $ustid = '';
+
+	/**
+	 * Kurzbemerkung
+	 *
+	 * @var \string
+	 */
+	protected $comments = '';
+
+	/**
+	 * Datenfreigabe Fahrgemeinschaft
+	 *
+	 * @var boolean
+	 */
+	protected $freigabefahrgemeinschaft = FALSE;
+	
+	/**
+	 * Zustimmung AGB
+	 *
+	 * @var \string
+	 */
+	protected $zustimmungagb;
+	
+	/**
+	 * Passbild
+	 *
+	 * @var \string
+	 */
+	protected $passbild;
+	
+	/**
+	 * Mit dem heutigen Datum bestätige ich die Richtigkeit der gemachten Angaben.
+	 *
+	 * @var \string
+	 */
+	protected $checkrichtigkeit;
+	
+	/**
+	 * Mit dem heutigen Datum bestätige ich die Richtigkeit der gemachten Angaben.
+	 *
+	 * @var \DateTime
+	 */
+	protected $datumrichtigkeit;
+	
 	/**
 	 * Returns the txQualinetfeuserVereinsnummer
 	 *
@@ -1397,5 +1469,202 @@ class Feuser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
 		$this->country = $country;
 	}
 
+	/**
+	 * Returns the company
+	 *
+	 * @return \string $company
+	 */
+	public function getCompany() {
+		return $this->company;
+	}
+
+	/**
+	 * Sets the company
+	 *
+	 * @param \string $company
+	 * @return void
+	 */
+	public function setCompany($company) {
+		$this->company = $company;
+	}
+
+	/**
+	 * Returns the www
+	 *
+	 * @return \string $www
+	 */
+	public function getWww() {
+		return $this->www;
+	}
+
+	/**
+	 * Sets the www
+	 *
+	 * @param \string $www
+	 * @return void
+	 */
+	public function setWww($www) {
+		$this->www = $www;
+	}
+	/**
+	 * Returns the ustidben
+	 *
+	 * @return boolean $ustidben
+	 */
+	public function getUstidben() {
+		return $this->ustidben;
+	}
+
+	/**
+	 * Sets the ustidben
+	 *
+	 * @param boolean $ustidben
+	 * @return void
+	 */
+	public function setUstidben($ustidben) {
+		$this->ustidben = $ustidben;
+	}
+
+	/**
+	 * Returns the ustid
+	 *
+	 * @return \string $ustid
+	 */
+	public function getUstid() {
+		return $this->ustid;
+	}
+
+	/**
+	 * Sets the ustid
+	 *
+	 * @param \string $ustid
+	 * @return void
+	 */
+	public function setUstid($ustid) {
+		$this->ustid = $ustid;
+	}
+
+	/**
+	 * Returns the Kurzbemerkung
+	 *
+	 * @return \string $comments
+	 */
+	public function getComments() {
+		return $this->comments;
+	}
+	
+	/**
+	 * Sets the Kurzbemerkung
+	 *
+	 * @param \string $comments
+	 * @return void
+	 */
+	public function setComments($comments) {
+		$this->comments = $comments;
+	}
+
+	/**
+	 * Returns the freigabefahrgemeinschaft
+	 *
+	 * @return boolean $freigabefahrgemeinschaft
+	 */
+	public function getFreigabefahrgemeinschaft() {
+		return $this->freigabefahrgemeinschaft;
+	}
+	
+	/**
+	 * Sets the freigabefahrgemeinschaft
+	 *
+	 * @param boolean $freigabefahrgemeinschaft
+	 * @return void
+	 */
+	public function setFreigabefahrgemeinschaft($freigabefahrgemeinschaft) {
+		$this->freigabefahrgemeinschaft = $freigabefahrgemeinschaft;
+	}
+	
+	/**
+	 * Returns the boolean state of freigabefahrgemeinschaft
+	 *
+	 * @return boolean
+	 */
+	public function isFreigabefahrgemeinschaft() {
+		return $this->getFreigabefahrgemeinschaft();
+	}
+	
+	/**
+	 * Returns the zustimmungagb
+	 *
+	 * @return \string $zustimmungagb
+	 */
+	public function getZustimmungagb() {
+		return $this->zustimmungagb;
+	}
+	
+	/**
+	 * Sets the zustimmungagb
+	 *
+	 * @param \string $zustimmungagb
+	 * @return void
+	 */
+	public function setZustimmungagb($zustimmungagb) {
+		$this->zustimmungagb = $zustimmungagb;
+	}
+	
+	/**
+	 * Returns the passbild
+	 *
+	 * @return \string $passbild
+	 */
+	public function getPassbild() {
+		return $this->passbild;
+	}
+	
+	/**
+	 * Sets the passbild
+	 *
+	 * @param \string $passbild
+	 * @return void
+	 */
+	public function setPassbild($passbild) {
+		$this->passbild = $passbild;
+	}
+	
+	/**
+	 * Returns the checkrichtigkeit
+	 *
+	 * @return \string $checkrichtigkeit
+	 */
+	public function getCheckrichtigkeit() {
+		return $this->checkrichtigkeit;
+	}
+	
+	/**
+	 * Sets the checkrichtigkeit
+	 *
+	 * @param \string $checkrichtigkeit
+	 * @return void
+	 */
+	public function setCheckrichtigkeit($checkrichtigkeit) {
+		$this->checkrichtigkeit = $checkrichtigkeit;
+	}
+	
+	/**
+	 * Returns the datumrichtigkeit
+	 *
+	 * @return \DateTime $datumrichtigkeit
+	 */
+	public function getDatumrichtigkeit() {
+		return $this->datumrichtigkeit;
+	}
+	
+	/**
+	 * Sets the datumrichtigkeit
+	 *
+	 * @param \DateTime $datumrichtigkeit
+	 * @return void
+	 */
+	public function setDatumrichtigkeit($datumrichtigkeit) {
+		$this->datumrichtigkeit = $datumrichtigkeit;
+	}	
 }
 ?>
