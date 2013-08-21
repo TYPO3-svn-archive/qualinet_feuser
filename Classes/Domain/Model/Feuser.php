@@ -293,7 +293,7 @@ class Feuser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
 	 * Benutzername
 	 *
 	 * @var \string
-	 * @validate NotEmpty
+	 * @validate NotEmpty,BLSV\QualinetFeuser\Domain\Validator\UsernameValidator
 	 */
 	protected $username;
 
@@ -442,6 +442,20 @@ class Feuser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
 	 * @var \string
 	 */
 	protected $passbild;
+
+	/**
+	 * Passbild Upload
+	 *
+	 * @var array
+	 */
+	protected $passbildUpload;
+	
+	/**
+	 * Passbild-Pfad
+	 *
+	 * @var \string
+	 */
+	protected $passbildPfad = 'fileadmin/user_upload/passbild/';
 	
 	/**
 	 * Mit dem heutigen Datum bestätige ich die Richtigkeit der gemachten Angaben.
@@ -1611,6 +1625,15 @@ class Feuser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
 	}
 	
 	/**
+	 * Returns the passbildPfad
+	 *
+	 * @return \string $passbild
+	 */
+	public function getPassbildPfad() {
+		return $this->passbildPfad;
+	}
+	
+	/**
 	 * Returns the passbild
 	 *
 	 * @return \string $passbild
@@ -1618,6 +1641,7 @@ class Feuser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
 	public function getPassbild() {
 		return $this->passbild;
 	}
+
 	
 	/**
 	 * Sets the passbild
@@ -1627,6 +1651,43 @@ class Feuser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
 	 */
 	public function setPassbild($passbild) {
 		$this->passbild = $passbild;
+	}
+
+	/**
+	 * Returns the passbild upload
+	 *
+	 * @return array $passbildUpload
+	 */
+	public function getPassbildUpload() {
+		return $this->passbildUpload;
+	}
+	
+	/**
+	 * Sets the passbild upload
+	 *
+	 * @param array $upload
+	 * @return void
+	 */
+	public function setPassbildUpload($upload) {
+		if ($upload['name']){
+			$res = \BLSV\QualinetFeuser\Service\FileService::uploadImage(
+					$upload['tmp_name'],
+					$this->uid.'_'.$upload['name'],
+					$this->passbildPfad
+			);
+
+			if ($res){
+				if ($this->passbild){
+					\BLSV\QualinetFeuser\Service\FileService::remove($this->passbild, $this->passbildPfad);
+				}
+				$this->passbild = $res;
+		//		echo "neues bild: '$res'"; die();
+			} else {
+				// echo '<pre>';
+				// print_r($upload);
+				// die ('Model Feuser: das Bild konnte nicht hochgeladen werden');
+			}
+		}
 	}
 	
 	/**

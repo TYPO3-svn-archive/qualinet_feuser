@@ -12,44 +12,29 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="main">
+
+<script type="text/javascript">
+	$(function(){
+		$(".datepicker").datepicker();
+	});
+</script>
+
 <h3><f:translate key="tx_qualinetfeuser_domain_model_feuser.titel_stammdaten" /></h3>
 
 <f:flashMessages />
 <div class="error"><f:render partial="FormErrors" arguments="{object:Feuser}"/></div>
 
 <div class="tx-keuserregister-pi1">
-	<f:form action="update" name="feuser" object="{feuser}" >
-<f:comment><f:debug>{feuser}</f:debug></f:comment>
-	
-	<f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_referentennr" /><f:form.textfield property="txQualinetfeuserReferentennr" />
-	<br />
+	<f:form enctype="multipart/form-data" method="post" action="update" name="feuser" object="{feuser}" >
+
 
 <f:comment>
-<label for="freigabefahrgemeinschaft">
-	<f:translate key="tx_qualinetfeuser_domain_model_feuser.freigabefahrgemeinschaft" />
-</label>
-	<f:form.checkbox property="freigabefahrgemeinschaft" value="1" /><br />
-
-<label for="zustimmungagb">
-	<f:translate key="tx_qualinetfeuser_domain_model_feuser.zustimmungagb" />
-</label>
-	<f:form.checkbox property="zustimmungagb" value="1" /><br />
-
-<label for="passbild">
-	<f:translate key="tx_qualinetfeuser_domain_model_feuser.passbild" />
-</label>
-	<f:form.upload property="passbild" /><br />
-
-<label for="checkrichtigkeit">
-	<f:translate key="tx_qualinetfeuser_domain_model_feuser.checkrichtigkeit" />
-</label>
-	<f:form.checkbox property="checkrichtigkeit" value="1" /><br />
-
-<label for="datumrichtigkeit">
-	<f:translate key="tx_qualinetfeuser_domain_model_feuser.datumrichtigkeit" />
-</label>
-	<f:form.textfield class="datepicker hasDatepicker" property="datumrichtigkeit"  value="{feuser.datumrichtigkeit->f:format.date()}" /><br />	
-</f:comment>	
+		<div class="fieldset">
+			<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_referentennr" /></label>
+			<div class="field"><f:form.textfield property="txQualinetfeuserReferentennr" /></div>
+			<div class="clearer"></div>
+		</div>
+</f:comment>
 
 	
 		<f:if condition="{feuser.txQualinetfeuserReferentennr}">
@@ -60,5 +45,6 @@ Otherwise your changes will be overwritten the next time you save the extension 
 		<f:form.submit value="Daten absenden" />
 	</f:form>
 </div>
+
 
 </f:section>

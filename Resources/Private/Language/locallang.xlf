@@ -158,7 +158,7 @@
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.zustimmungagb"><source>Zustimmung AGB</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.passbild"><source>Passbild</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.checkrichtigkeit"><source>Mit dem heutigen Datum bestätige ich die Richtigkeit der gemachten Angaben.</source></trans-unit>
-			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.datumrichtigkeit"><source>Mit dem heutigen Datum bestätige ich die Richtigkeit der gemachten Angaben.</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.datumrichtigkeit"><source>Datum / Richtigkeit der Angaben</source></trans-unit>
 
 			
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.titel_stammdaten"><source>Stammdaten ändern</source></trans-unit>
@@ -167,6 +167,7 @@
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.titel_kommunikation"><source>Kommunikation</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.titel_bankverbindung"><source>Bankverbindung</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.titel_datenschutz"><source>Datenschutz</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.titel_uebungsleiter"><source>Für Lizenzantrag Übungsleiter</source></trans-unit>
 		</body>
 	</file>
 </xliff>

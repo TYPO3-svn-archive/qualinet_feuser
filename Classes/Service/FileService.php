@@ -1,5 +1,5 @@
 <?php
-namespace BLSV\QualinetFeuser\Domain\Repository;
+namespace BLSV\QualinetFeuser\Service;
 
 /***************************************************************
  *  Copyright notice
@@ -32,9 +32,33 @@ namespace BLSV\QualinetFeuser\Domain\Repository;
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class FeuserRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
-	public function persistAll(){
-		$this->persistenceManager->persistAll();
+class FileService {
+
+	/**
+	 * File uploaden
+	 * 
+	 * @param string $fileTemp
+	 * @param string $fileName
+	 * @param string $uploadPath
+	 * @return mixed
+	 */
+	public function uploadImage($fileTemp, $fileName, $uploadPath){
+		$res = false;
+		$basicFileFunctions = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('t3lib_basicFileFunctions');
+		$fileName = $basicFileFunctions->cleanFileName($fileName);
+		$uploadPath = $basicFileFunctions->cleanDirectoryName($uploadPath);
+		$fileUpload = $basicFileFunctions->getUniqueName($fileName, $uploadPath);
+		
+		$info = getimagesize($fileTemp);
+		if ($info && move_uploaded_file($fileTemp, $fileUpload)){
+			$res = basename($fileUpload);
+		}
+		return $res;
 	}
+	
+	public function remove($file, $path){
+		unlink($path.$file);
+	}
+
 }
 ?>

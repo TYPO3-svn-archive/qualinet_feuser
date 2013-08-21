@@ -1,5 +1,11 @@
 <h3><f:translate key="tx_qualinetfeuser_domain_model_feuser.titel_stammdaten_referent" /></h3>
 <div class="fieldset">
+	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.username" /></label>
+	<div class="field"><f:form.textfield property="username" /></div>
+	<div class="clearer"></div>
+</div>
+
+<div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.title" /></label>
 	<div class="field"><f:form.textfield property="title" /></div>
 	<div class="clearer"></div>
@@ -7,13 +13,13 @@
 
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.first_name" /> <span class="req"> *</span></label>
-	<div class="field"><f:form.textfield property="firstName" /></div>
+	<div class="field"><f:form.textfield property="firstName" additionalAttributes="{required:'1'}" /></div>
 	<div class="clearer"></div>
 </div>
 
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.last_name" /> <span class="req"> *</span></label>
-	<div class="field"><f:form.textfield property="lastName" /></div>
+	<div class="field"><f:form.textfield property="lastName" additionalAttributes="{required:'1'}" /></div>
 	<div class="clearer"></div>
 </div>
 
@@ -43,7 +49,7 @@
 
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.date_of_birth" /> <span class="req"> *</span></label>
-	<div class="field"><f:form.textfield class="datepicker hasDatepicker" property="dateOfBirth" value="<f:format.date format='d.m.Y'>{feuser.dateOfBirth}</f:format.date>" /></div>
+	<div class="field"><f:form.textfield class="datepicker" property="dateOfBirth" value="<f:format.date format='d.m.Y'>{feuser.dateOfBirth}</f:format.date>" additionalAttributes="{required:'1'}" /></div>
 	<div class="clearer"></div>
 </div>
 
@@ -129,7 +135,7 @@
 
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.email" /> <span class="req"> *</span></label>
-	<div class="field"><f:form.textfield property="email" /></div>
+	<div class="field"><f:form.textfield property="email" additionalAttributes="{required:'1'}" /></div>
 	<div class="clearer"></div>
 </div>
 
@@ -206,7 +212,7 @@
 
 <div class="fieldset">
 	<label>&nbsp;</label>
-	<div class="field"><f:form.checkbox property="txQualinetfeuserDatenschutz" value="1" /></div> Die <a target="_blank" href="agb.html">AGB</a>, <a target="_blank" href="datenschutzbestimmungen.html">Datenschutzbestimmungen</a> und die <a target="_blank" href="widerrufsbelehrung.html">Widerrufsbelehrung</a> habe ich zur Kenntnis genommen
+ 	<div class="field"><f:form.checkbox property="txQualinetfeuserDatenschutz" value="1" additionalAttributes="{required:'1'}" /></div> Die <a target="_blank" href="agb.html">AGB</a>, <a target="_blank" href="datenschutzbestimmungen.html">Datenschutzbestimmungen</a> und die <a target="_blank" href="widerrufsbelehrung.html">Widerrufsbelehrung</a> habe ich zur Kenntnis genommen
 	<div class="error"></div>
 	<div class="clearer"></div>
 </div>

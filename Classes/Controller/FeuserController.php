@@ -100,14 +100,21 @@ class FeuserController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
 	 * @return void
 	 */
 	public function initializeUpdateAction() {
-
-		// Geburtsdatum konvertieren
-		if (isset($this->arguments['feuser'])) {
-			$this->arguments['feuser']
-			->getPropertyMappingConfiguration()
-			->forProperty('dateOfBirth')
-			->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter',
+		if ($this->arguments->hasArgument('feuser')) {
+			$propertyMappingConfig = $this->arguments['feuser']->getPropertyMappingConfiguration();
+			
+			// Geburtsdatum konvertieren
+			$propertyMappingConfig->forProperty('dateOfBirth')
+				->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter',
 					\TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT,'d.m.Y');
+
+			// Richtigkeitsdatum konvertieren
+			$propertyMappingConfig->forProperty('datumrichtigkeit')
+				->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter',
+					\TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT,'d.m.Y');
+			
+			// Passbild-Upload konvertieren
+			$propertyMappingConfig->setTargetTypeForSubProperty('passbildUpload', 'array');
 		}
 	}
 	
@@ -118,8 +125,11 @@ class FeuserController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
 	 * @return void
 	 */
 	public function updateAction(\BLSV\QualinetFeuser\Domain\Model\Feuser $feuser) {
+		
 		$this->feuserRepository->update($feuser);
-		$this->flashMessageContainer->add('Your Feuser was updated.');
+//		$this->feuserRepository->persistAll();
+		
+		$this->flashMessageContainer->add('Die Daten wurden aktualisiert');
 		$this->redirect('edit');
 	}
 
@@ -134,6 +144,5 @@ class FeuserController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
 		$this->flashMessageContainer->add('Your Feuser was removed.');
 		$this->redirect('list');
 	}
-
 }
 ?>
