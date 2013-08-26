@@ -3,151 +3,54 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2013-08-13T14:01:10Z" product-name="qualinet_feuser">
 		<header/>
 		<body>
-
-			<trans-unit id="tx_qualinetfeuser_vereinsnummer.description">
-				<source>Vereinsnummer</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_uebungsleiterid.description">
-				<source>Übungsleiterid</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_kontonr.description">
-				<source>Kontonummer</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_blz.description">
-				<source>Bankleitzahl</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_bankname.description">
-				<source>Bankname</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_mailsvondritten.description">
-				<source>Mails von Dritten</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_bankeinzug.description">
-				<source>Bankeinzug</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_strasse.description">
-				<source>Straße</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_zusatz.description">
-				<source>Zusatz</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_strassearbeit.description">
-				<source>Straße Arbeit</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_gesperrt.description">
-				<source>gesperrt</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_stadtarbeit.description">
-				<source>Stadt Arbeit</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_kontaktnr.description">
-				<source>Kontakt Nr.</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_email2.description">
-				<source>EMail 2</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_emailarbeit.description">
-				<source>EMail Arbeit</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_blsvmitarbeiter.description">
-				<source>BLSV Mitarbeiter</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_faxarbeit.description">
-				<source>Fax Arbeit</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_mobil.description">
-				<source>Mobil</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_referentennr.description">
-				<source>Referenten Nr.</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_pager.description">
-				<source>Pager</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_telprivat.description">
-				<source>Telefon Privat</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_telarbeit.description">
-				<source>Telefon Arbeit</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_plzarbeit.description">
-				<source>PLZ Arbeit</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_beschreibung.description">
-				<source>Beschreibung</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_refvertragversendet.description">
-				<source>Referent Vertrag versendet</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_beschreibungkurz.description">
-				<source>Beschreibung kurz</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_umsatzsteuerid.description">
-				<source>Umsatzsteuer Id</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_kreditorid.description">
-				<source>Kreditor Id</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_durchwahl.description">
-				<source>Durchwahl</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_teilnehmerid.description">
-				<source>Teilnehmer Id</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_iban.description">
-				<source>IBAN</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_swift.description">
-				<source>Swift</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_blsvwerbung.description">
-				<source>BLSV Werbung</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_ehrenamt.description">
-				<source>Ehrenamt</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_hauptamt.description">
-				<source>Hauptamt</source>
-			</trans-unit>
-			<trans-unit id="tx_qualinetfeuser_datenschutz.description">
-				<source>Datenschutz</source>
-			</trans-unit>
-			<trans-unit id="username.description">
-				<source>Benutzername</source>
-			</trans-unit>
-			<trans-unit id="gender.description">
-				<source>Anrede</source>
-			</trans-unit>
-			<trans-unit id="first_name.description">
-				<source>Vorname</source>
-			</trans-unit>
-			<trans-unit id="last_name.description">
-				<source>Nachname</source>
-			</trans-unit>
-			<trans-unit id="date_of_birth.description">
-				<source>Geburtstag</source>
-			</trans-unit>
-			<trans-unit id="email.description">
-				<source>E-Mail</source>
-			</trans-unit>
-			<trans-unit id="address.description">
-				<source>Adresse</source>
-			</trans-unit>
-			<trans-unit id="city.description">
-				<source>Ort</source>
-			</trans-unit>
-			<trans-unit id="zip.description">
-				<source>Postleitzahl</source>
-			</trans-unit>
-			<trans-unit id="telephone.description">
-				<source>Telefon</source>
-			</trans-unit>
-			<trans-unit id="fax.description">
-				<source>Fax</source>
-			</trans-unit>
-			<trans-unit id="title.description">
-				<source>Titel</source>
-			</trans-unit>
+			<trans-unit id="tx_qualinetfeuser_vereinsnummer.description"><source>Vereinsnummer</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_uebungsleiterid.description"><source>Übungsleiterid</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_kontonr.description"><source>Kontonummer</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_blz.description"><source>Bankleitzahl</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_bankname.description"><source>Bankname</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_mailsvondritten.description"><source>Mails von Dritten</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_bankeinzug.description"><source>Bankeinzug</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_strasse.description"><source>Straße</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_zusatz.description"><source>Zusatz</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_strassearbeit.description"><source>Straße Arbeit</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_gesperrt.description"><source>gesperrt</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_stadtarbeit.description"><source>Stadt Arbeit</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_kontaktnr.description"><source>Kontakt Nr.</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_email2.description"><source>EMail 2</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_emailarbeit.description"><source>EMail Arbeit</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_blsvmitarbeiter.description"><source>BLSV Mitarbeiter</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_faxarbeit.description"><source>Fax Arbeit</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_mobil.description"><source>Mobil</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_referentennr.description"><source>Referenten Nr.</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_pager.description"><source>Pager</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_telprivat.description"><source>Telefon Privat</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_telarbeit.description"><source>Telefon Arbeit</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_plzarbeit.description"><source>PLZ Arbeit</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_beschreibung.description"><source>Beschreibung</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_refvertragversendet.description"><source>Referent Vertrag versendet</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_beschreibungkurz.description"><source>Beschreibung kurz</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_umsatzsteuerid.description"><source>Umsatzsteuer Id</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_kreditorid.description"><source>Kreditor Id</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_durchwahl.description"><source>Durchwahl</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_teilnehmerid.description"><source>Teilnehmer Id</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_iban.description"><source>IBAN</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_swift.description"><source>Swift</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_blsvwerbung.description"><source>BLSV Werbung</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_ehrenamt.description"><source>Ehrenamt</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_hauptamt.description"><source>Hauptamt</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_datenschutz.description"><source>Datenschutz</source></trans-unit>
+			<trans-unit id="username.description"><source>Benutzername</source></trans-unit>
+			<trans-unit id="gender.description"><source>Anrede</source></trans-unit>
+			<trans-unit id="first_name.description"><source>Vorname</source></trans-unit>
+			<trans-unit id="last_name.description"><source>Nachname</source></trans-unit>
+			<trans-unit id="date_of_birth.description"><source>Geburtstag</source></trans-unit>
+			<trans-unit id="email.description"><source>E-Mail</source></trans-unit>
+			<trans-unit id="address.description"><source>Adresse</source></trans-unit>
+			<trans-unit id="city.description"><source>Ort</source></trans-unit>
+			<trans-unit id="zip.description"><source>Postleitzahl</source></trans-unit>
+			<trans-unit id="telephone.description"><source>Telefon</source></trans-unit>
+			<trans-unit id="fax.description"><source>Fax</source></trans-unit>
+			<trans-unit id="title.description"><source>Titel</source></trans-unit>
 			<trans-unit id="country.description"><source>Länder-/Regionscode</source></trans-unit>
 			<trans-unit id="company.description"><source>Vereinsname</source></trans-unit>
 			<trans-unit id="www.description"><source>Homepage</source></trans-unit>

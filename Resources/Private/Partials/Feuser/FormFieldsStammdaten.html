@@ -1,56 +1,55 @@
 <h3><f:translate key="tx_qualinetfeuser_domain_model_feuser.titel_stammdaten_teilnehmer" /></h3>
-
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.username" /></label>
-	<div class="field"><f:form.textfield property="username" /></div>
+	<div class="field"><f:form.textfield property="username" additionalAttributes="{placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_username\' />'}" /></div>
 	<div class="clearer"></div>
 </div>
 
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.title" /></label>
-	<div class="field"><f:form.textfield property="title" /></div>
+	<div class="field"><f:form.textfield property="title" additionalAttributes="{placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_title\' />'}" /></div>
 	<div class="clearer"></div>
 </div>
 
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.first_name" /> <span class="req"> *</span></label>
-	<div class="field"><f:form.textfield property="firstName" additionalAttributes="{required:'1'}" /></div>
+	<div class="field"><f:form.textfield property="firstName"  additionalAttributes="{required:'1', placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_first_name\' />'}" /></div>
 	<div class="clearer"></div>
 </div>
 
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.last_name" /> <span class="req"> *</span></label>
-	<div class="field"><f:form.textfield property="lastName" additionalAttributes="{required:'1'}" /></div>
+	<div class="field"><f:form.textfield property="lastName" additionalAttributes="{required:'1', placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_last_name\' />'}" /></div>
 	<div class="clearer"></div>
 </div>
 
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.address" /></label>
-	<div class="field"><f:form.textfield property="address" /></div>
+	<div class="field"><f:form.textfield property="address" additionalAttributes="{placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_address\' />'}" /></div>
 	<div class="clearer"></div>
 </div>
 
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.zip" /></label>
-	<div class="field"><f:form.textfield property="zip" /></div>
+	<div class="field"><f:form.textfield property="zip" additionalAttributes="{placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_zip\' />'}" /></div>
 	<div class="clearer"></div>
 </div>
 
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.city" /></label>
-	<div class="field"><f:form.textfield property="city" /></div>
+	<div class="field"><f:form.textfield property="city" additionalAttributes="{placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_city\' />'}" /></div>
 	<div class="clearer"></div>
 </div>
 
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.country" /></label>
-	<div class="field"><f:form.textfield property="country" /></div>
+	<div class="field"><f:form.textfield property="country" additionalAttributes="{placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_country\' />'}" /></div>
 	<div class="clearer"></div>
 </div>
 
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.date_of_birth" /> <span class="req"> *</span></label>
-	<div class="field"><f:form.textfield class="datepicker" property="dateOfBirth" value="<f:format.date format='d.m.Y'>{feuser.dateOfBirth}</f:format.date>" additionalAttributes="{required:'1'}" /></div>
+	<div class="field"><f:form.textfield class="datepicker" property="dateOfBirth" value="<f:format.date format='d.m.Y'>{feuser.dateOfBirth}</f:format.date>" additionalAttributes="{required:'1', placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_date_of_birth\' />'}" /></div>
 	<div class="clearer"></div>
 </div>
 
@@ -74,19 +73,19 @@
 
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_uebungsleiterid" /></label>
-	<div class="field"><f:form.textfield type="number" additionalAttributes="{min: 0}" property="txQualinetfeuserUebungsleiterid" /></div>
+	<div class="field"><f:form.textfield type="number" property="txQualinetfeuserUebungsleiterid" additionalAttributes="{min: 0, placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_tx_qualinetfeuser_uebungsleiterid\' />'}" /></div>
 	<div class="clearer"></div>
 </div>
 
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_vereinsnummer" /></label>
-	<div class="field"><f:form.textfield property="txQualinetfeuserVereinsnummer" /></div>
+	<div class="field"><f:form.textfield property="txQualinetfeuserVereinsnummer" additionalAttributes="{placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_tx_qualinetfeuser_vereinsnummer\' />'}" /></div>
 	<div class="clearer"></div>
 </div>
 
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.company" /></label>
-	<div class="field"><f:form.textfield property="company" /></div>
+	<div class="field"><f:form.textfield property="company" additionalAttributes="{placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_company\' />'}" /></div>
 	<div class="clearer"></div>
 </div>
 
@@ -94,34 +93,39 @@
 <h3><f:translate key="tx_qualinetfeuser_domain_model_feuser.titel_kommunikation" /></h3>
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.telephone" /></label>
-	<div class="field"><f:form.textfield property="telephone" /></div>
+	<div class="field"><f:form.textfield property="telephone" additionalAttributes="{placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_telephone\' />'}" /></div>
 	<div class="clearer"></div>
 </div>
 
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_mobil" /></label>
-	<div class="field"><f:form.textfield property="txQualinetfeuserMobil" /></div>
+	<div class="field"><f:form.textfield property="txQualinetfeuserMobil" additionalAttributes="{placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_tx_qualinetfeuser_mobil\' />'}" /></div>
 	<div class="clearer"></div>
 </div>
 
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.fax" /></label>
-	<div class="field"><f:form.textfield property="fax" /></div>
+	<div class="field"><f:form.textfield property="fax" additionalAttributes="{placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_fax\' />'}" /></div>
 	<div class="clearer"></div>
 </div>
 
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.email" /> <span class="req"> *</span></label>
-	<div class="field"><f:form.textfield property="email" additionalAttributes="{required:'1'}" /></div>
+	<div class="field"><f:form.textfield property="email" additionalAttributes="{required:'1', placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_email\' />'}" /></div>
 	<div class="clearer"></div>
 </div>
 
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.comments" /></label>
-	<div class="field"><f:form.textfield property="comments" /></div>
+	<div class="field"><f:form.textfield property="comments" additionalAttributes="{placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_comments\' />'}" /></div>
 	<div class="clearer"></div>
 </div>
 
+<div class="fieldset">
+	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.freigabefahrgemeinschaft" /></label>
+	<div class="field"><f:form.checkbox property="freigabefahrgemeinschaft" value="1" /></div>
+	<div class="clearer"></div>
+</div>
 
 
 <h3><f:translate key="tx_qualinetfeuser_domain_model_feuser.titel_uebungsleiter" /></h3>
@@ -138,39 +142,29 @@
 </div>
 
 <div class="fieldset">
-	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.freigabefahrgemeinschaft" /></label>
-	<div class="field"><f:form.checkbox property="freigabefahrgemeinschaft" value="1" /></div>
-	<div class="clearer"></div>
-</div>
-
-<div class="fieldset">
 	<label><f:translate key="tx_qualinetfeuser_domain_model_feuser.datumrichtigkeit" /></label>
-	<div class="field"><f:form.textfield class="datepicker" property="datumrichtigkeit" value="<f:format.date format='d.m.Y'>{feuser.datumrichtigkeit}</f:format.date>" /></div>
+	<div class="field"><f:form.textfield class="datepicker" property="datumrichtigkeit" value="<f:format.date format='d.m.Y'>{feuser.datumrichtigkeit}</f:format.date>" additionalAttributes="{placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_datumrichtigkeit\' />'}" /></div>
 	<div class="clearer"></div>
 </div>
 	
-
-
-
-
 <h3><f:translate key="tx_qualinetfeuser_domain_model_feuser.titel_datenschutz" /></h3>
 <div class="fieldset">
 	<label>&nbsp;</label>
-	<div class="field"><f:form.checkbox property="txQualinetfeuserMailsvondritten" value="1" /></div> <f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_mailsvondritten_text" />
-	<div class="error"></div>
-	<div class="clearer"></div>
-</div>
-
-<div class="fieldset">
-	<label>&nbsp;</label>
-	<div class="field"><f:form.checkbox property="txQualinetfeuserBlsvwerbung" value="1" /></div> <f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_blsvwerbung_text" />
-	<div class="error"></div>
-	<div class="clearer"></div>
-</div>
-
-<div class="fieldset">
-	<label>&nbsp;</label>
-	<div class="field"><f:form.checkbox property="txQualinetfeuserDatenschutz" value="1" additionalAttributes="{required:'1'}" /></div> Die <a target="_blank" href="agb.html">AGB</a>, <a target="_blank" href="datenschutzbestimmungen.html">Datenschutzbestimmungen</a> und die <a target="_blank" href="widerrufsbelehrung.html">Widerrufsbelehrung</a> habe ich zur Kenntnis genommen
-	<div class="error"></div>
+	<div class="field">
+		<div class="datenschutz">
+			<div class="datenschutzCheck"><f:form.checkbox property="txQualinetfeuserMailsvondritten" value="1" /></div>
+			<div class="datenschutzText"><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_mailsvondritten_text" /></div>
+		</div>
+		<br />
+		<div class="datenschutz">
+			<div class="datenschutzCheck"><f:form.checkbox property="txQualinetfeuserBlsvwerbung" value="1" /></div>
+			<div class="datenschutzText"><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_blsvwerbung_text" /></div>
+		</div>
+		<br />
+		<div class="datenschutz">
+			<div class="datenschutzCheck"><f:form.checkbox property="txQualinetfeuserDatenschutz" value="1" additionalAttributes="{required:'1'}" /></div>
+			<div class="datenschutzText">Die <a target="_blank" href="agb.html">AGB</a>, <a target="_blank" href="datenschutzbestimmungen.html">Datenschutzbestimmungen</a> und die <a target="_blank" href="widerrufsbelehrung.html">Widerrufsbelehrung</a> habe ich zur Kenntnis genommen</div>
+		</div>
+	</div>
 	<div class="clearer"></div>
 </div>

@@ -341,7 +341,6 @@ class Feuser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
 	 * Addresse
 	 *
 	 * @var \string
-	 * @validate NotEmpty
 	 */
 	protected $address;
 
@@ -1685,7 +1684,7 @@ class Feuser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
 			} else {
 				// echo '<pre>';
 				// print_r($upload);
-				// die ('Model Feuser: das Bild konnte nicht hochgeladen werden');
+				die ('Model_Feuser: das Bild konnte nicht hochgeladen werden');
 			}
 		}
 	}
