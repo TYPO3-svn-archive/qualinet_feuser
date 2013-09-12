@@ -303,7 +303,7 @@ class Feuser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
 	 * @var \integer
 	 * @validate NotEmpty
 	 */
-	protected $gender;
+	protected $gender = 0;
 
 	/**
 	 * Vorname
@@ -1726,5 +1726,15 @@ class Feuser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
 	public function setDatumrichtigkeit($datumrichtigkeit) {
 		$this->datumrichtigkeit = $datumrichtigkeit;
 	}	
+
+	/**
+	 * Returns the txQualinetfeuserVereinsnummer pattern
+	 *
+	 * @return \string $txQualinetfeuserVereinsnummer
+	 */
+	public function getTxQualinetfeuserVereinsnummerPattern() {
+		return '^([1-7][0-9]{4})?$';
+	}
+	
 }
 ?>

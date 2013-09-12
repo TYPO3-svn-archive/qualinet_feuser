@@ -862,10 +862,10 @@ class FeuserTest extends \TYPO3\CMS\Extbase\Tests\Unit\BaseTestCase {
 	 * @test
 	 */
 	public function setUstidbenForBooleanSetsUstidben() {
-		$this->fixture->setUstbenid(true);
+		$this->fixture->setUstidben(true);
 	
 		$this->assertSame(
-				'true',
+				true,
 				$this->fixture->getUstidben()
 		);
 	}
@@ -879,7 +879,7 @@ class FeuserTest extends \TYPO3\CMS\Extbase\Tests\Unit\BaseTestCase {
 	 * @test
 	 */
 	public function setUstidForStringSetsUstid() {
-		$this->fixture->setUstben('Conceived at T3CON10');
+		$this->fixture->setUstid('Conceived at T3CON10');
 	
 		$this->assertSame(
 				'Conceived at T3CON10',

@@ -21,30 +21,23 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 <h3><f:translate key="tx_qualinetfeuser_domain_model_feuser.titel_stammdaten" /></h3>
 
-<f:flashMessages />
-<div class="error"><f:render partial="FormErrors" arguments="{object:Feuser}"/></div>
+<f:flashMessages class="flashMessages" />
+<f:render partial="FormErrors" arguments="{object:Feuser}"/>
 
 <div class="tx-keuserregister-pi1">
 	<f:form enctype="multipart/form-data" method="post" action="update" name="feuser" object="{feuser}" >
-
-
-<f:comment>
-		<div class="fieldset">
-			<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_referentennr" /></label>
-			<div class="field"><f:form.textfield property="txQualinetfeuserReferentennr" /></div>
-			<div class="clearer"></div>
-		</div>
-</f:comment>
-
 	
 		<f:if condition="{feuser.txQualinetfeuserReferentennr}">
-			<f:then><f:render partial="Feuser/FormFieldsReferent" arguments="{feuser:feuser}" /></f:then>
-			<f:else><f:render partial="Feuser/FormFieldsStammdaten" arguments="{feuser:feuser}" /></f:else>
+			<f:then>
+				<f:render partial="Feuser/FormFieldsReferent" arguments="{feuser:feuser, options:options}" />
+				<div class="fieldset"><f:form.submit value="Referentendaten speichern" /></div>
+			</f:then>
+			<f:else>
+				<f:render partial="Feuser/FormFieldsStammdaten" arguments="{feuser:feuser, options:options}" />
+				<div class="fieldset"><f:form.submit value="Stammdaten speichern" /></div>
+			</f:else>
 		</f:if>
 
-		<div class="fieldset">
-			<f:form.submit value="Daten speichern" />
-		</div>
 	</f:form>
 </div>
 

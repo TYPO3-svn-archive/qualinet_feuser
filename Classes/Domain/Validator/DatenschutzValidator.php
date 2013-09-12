@@ -7,7 +7,7 @@ class DatenschutzValidator extends \TYPO3\CMS\Extbase\Validation\Validator\Abstr
 
     	$this->errors = array();
 		if (!$checkbox){
-			$this->addError('Bitte bestätigen Sie die AGB, Datenschutzbestimmungen und Widerrufsbelehrung', time());
+			$this->addError('Fehler 1378735448: Bitte bestätigen Sie die AGB, Datenschutzbestimmungen und Widerrufsbelehrung', 1378735448);
 			return false;
 		}
 		return true;

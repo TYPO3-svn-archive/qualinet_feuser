@@ -5,12 +5,11 @@ class UebungsleiteridValidator extends \TYPO3\CMS\Extbase\Validation\Validator\A
 	
     public function isValid($uebungsleiterid){
     	$this->errors = array();
-   		if (!preg_match('/^([0-9]*)?$/', $uebungsleiterid, $m)){
-			$this->addError('Bitte geben Sie eine gültige Übungsleiternummer an', time());
+   		if (!is_numeric($uebungsleiterid) || ($uebungsleiterid<2)) {
+			$this->addError('Fehler 1378735447: Bitte geben Sie eine gültige Übungsleiternummer an', 1378735447);
 			return false;
     	}
 		return true;
     }
 }
-
 ?>

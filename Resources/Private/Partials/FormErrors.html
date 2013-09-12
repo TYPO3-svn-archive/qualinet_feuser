@@ -1,12 +1,38 @@
+<f:debug>{object}</f:debug>
+
 <f:form.validationResults for="{object}">
+
+
+<f:comment>
+	<f:debug>{validationResults}</f:debug>
+	<f:debug>{validationResults.propertyResults}</f:debug>
+	<f:debug>{validationResults.flattenedErrors}</f:debug>
+</f:comment>
+
+<f:comment>
 	<f:if condition="{validationResults.flattenedErrors}">
-		<ul>
-		<f:for each="{validationResults.flattenedErrors}" key="propertyPath" as="errors">
-			<li>
-			{propertyPath}: <ul>
-				<f:for each="{errors}" as="error"><li>{error}</li></f:for>
-				</ul>
-			</li>
-		</f:for></ul>
+		<div class="flashMessages">
+			<ul>
+			<f:for each="{validationResults.flattenedErrors}" key="propertyPath" as="errors">
+				<li>
+				{propertyPath}: <ul>
+					<f:for each="{errors}" as="error"><li>{error}</li></f:for>
+					</ul>
+				</li>
+			</f:for></ul>
+		</div>
 </f:if>
+</f:comment>
+
+
+	<f:if condition="{validationResults.flattenedErrors}">
+		<div class="flashMessages">
+			<f:for each="{validationResults.flattenedErrors}" key="propertyPath" as="errors">
+					<f:for each="{errors}" as="error">
+						<f:translate key="error.{error.code}" arguments="{error.arguments}">{error.message}</f:translate><br />
+					</f:for>
+			</f:for>
+		</div>
+	</f:if>
+
 </f:form.validationResults>

@@ -63,6 +63,6 @@ CREATE TABLE fe_users (
 	checkrichtigkeit tinyint(1) unsigned DEFAULT '0' NOT NULL,
 	datumrichtigkeit int(11) DEFAULT '0' NOT NULL,
 
-	tx_extbase_type varchar(255) DEFAULT '' NOT NULL,
+	tx_extbase_type varchar(255) DEFAULT '0' NOT NULL,
 
 );

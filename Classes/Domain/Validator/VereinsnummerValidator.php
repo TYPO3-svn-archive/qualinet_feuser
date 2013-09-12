@@ -6,9 +6,10 @@ class VereinsnummerValidator extends \TYPO3\CMS\Extbase\Validation\Validator\Abs
     public function isValid($vereinsnummer){
 
     	$this->errors = array();
-    	 
-   		if (!preg_match('/^([1-7][0-9]{4})?$/', $vereinsnummer, $m)){
-   			$this->addError('Bitte geben Sie eine gültige Vereinsnummer an', time());
+
+    	$regEx = \BLSV\QualinetFeuser\Domain\Model\Feuser::getTxQualinetfeuserVereinsnummerPattern();
+   		if (!preg_match("/$regEx/", $vereinsnummer, $m)){
+   			$this->addError('Fehler 1378735445: Bitte geben Sie eine gültige Vereinsnummer an', 1378735445);
    			return false;
    		}
     	

@@ -92,7 +92,12 @@ class FeuserController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
 	 */
 	public function editAction() {
 		$feuser =  $this->feuserRepository->findByUid( $GLOBALS['TSFE']->fe_user->user['uid'] );
+
+		// $optionsService = new \BLSV\QualinetFeuser\Service\OptionsService();
+		$optionsService = $this->objectManager->create('BLSV\QualinetFeuser\Service\OptionsService');
+		
 		$this->view->assign('feuser', $feuser);
+		$this->view->assign('options', $optionsService);
 	}
 
 	/**
@@ -130,7 +135,9 @@ class FeuserController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
 //		$this->feuserRepository->persistAll();
 		
 		$this->flashMessageContainer->add('Die Daten wurden aktualisiert');
-		$this->redirect('edit');
+
+//		$this->redirect('edit');
+		$this->redirectToUri('myqualinet.html?active=0');		
 	}
 
 	/**
@@ -140,9 +147,9 @@ class FeuserController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
 	 * @return void
 	 */
 	public function deleteAction(\BLSV\QualinetFeuser\Domain\Model\Feuser $feuser) {
-		$this->feuserRepository->remove($feuser);
-		$this->flashMessageContainer->add('Your Feuser was removed.');
-		$this->redirect('list');
+		// $this->feuserRepository->remove($feuser);
+		// $this->flashMessageContainer->add('Your Feuser was removed.');
+		// $this->redirect('list');
 	}
 }
 ?>

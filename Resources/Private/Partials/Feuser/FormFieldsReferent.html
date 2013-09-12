@@ -7,7 +7,7 @@
 
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.title" /></label>
-	<div class="field"><f:form.textfield property="title" additionalAttributes="{placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_title\' />'}" /></div>
+	<div class="field"><f:form.select class="feuserTitle" property="title" options="{options.title}" /></div>
 	<div class="clearer"></div>
 </div>
 
@@ -43,7 +43,7 @@
 
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.country" /></label>
-	<div class="field"><f:form.textfield property="country" additionalAttributes="{placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_country\' />'}" /></div>
+	<div class="field"><f:form.select class="feuserCountry" property="country" options="{options.country}" /></div>
 	<div class="clearer"></div>
 </div>
 
@@ -55,31 +55,22 @@
 
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.gender" /></label>
-	<div class="field">
-		<f:form.select property="gender" options="{
-			99: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.gender_99\' />',
-			0: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.gender_0\' />', 
-			1: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.gender_1\' />' 
-		}" />
-	</div>
-	<div class="clearer"></div>
-</div>
-
-<div class="fieldset">
-	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_blsvmitarbeiter" /></label>
-	<div class="field"><f:form.checkbox property="txQualinetfeuserBlsvmitarbeiter" value="1" /></div>
+	<div class="field"><f:form.select property="gender" options="{options.gender}" /></div>
 	<div class="clearer"></div>
 </div>
 
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_uebungsleiterid" /></label>
-	<div class="field"><f:form.textfield type="number" property="txQualinetfeuserUebungsleiterid" additionalAttributes="{min: 0, placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_tx_qualinetfeuser_uebungsleiterid\' />'}" /></div>
+	<div class="field">BY-<f:form.textfield type="number" property="txQualinetfeuserUebungsleiterid" additionalAttributes="{min: 10000, max:79999, placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_tx_qualinetfeuser_uebungsleiterid\' />'}" /></div>
 	<div class="clearer"></div>
 </div>
 
 <div class="fieldset">
-	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_vereinsnummer" /></label>
-	<div class="field"><f:form.textfield property="txQualinetfeuserVereinsnummer" additionalAttributes="{placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_tx_qualinetfeuser_vereinsnummer\' />'}" /></div>
+	<label><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_vereinsnummer" /></label>
+	<div class="field">
+		<f:form.textfield property="txQualinetfeuserVereinsnummer" additionalAttributes="{min: 10000, max:79999, placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_tx_qualinetfeuser_vereinsnummer\' />'}" />
+		&nbsp;<f:translate key="tx_qualinetfeuser_domain_model_feuser.hinweis_tx_qualinetfeuser_vereinsnummer" />
+	</div>
 	<div class="clearer"></div>
 </div>
 

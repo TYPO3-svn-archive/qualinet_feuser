@@ -4,7 +4,7 @@
 		<header/>
 		<body>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser"><source>Feuser</source></trans-unit>
-			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_vereinsnummer"><source>Vereinsnummer</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_vereinsnummer"><source>BLSV-Vereinsnummer</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_uebungsleiterid"><source>Übungsleiternummer</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_kontonr"><source>Kontonummer</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_blz"><source>Bankleitzahl</source></trans-unit>
@@ -96,7 +96,7 @@
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ph_date_of_birth"><source>TT.MM.JJJJ</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ph_gender"><source>Anrede</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ph_tx_qualinetfeuser_uebungsleiterid"><source>Übungsleiternummer</source></trans-unit>
-			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ph_tx_qualinetfeuser_vereinsnummer"><source>Vereinsnummer</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ph_tx_qualinetfeuser_vereinsnummer"><source>BLSV-Vereinsnummer</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ph_company"><source>Vereinsname</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ph_ustid"><source>USt.IdNr.</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ph_telephone"><source>Telefon</source></trans-unit>
@@ -114,7 +114,13 @@
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ph_tx_qualinetfeuser_kontonr"><source>Kontonummer</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ph_tx_qualinetfeuser_iban"><source>IBAN</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ph_tx_qualinetfeuser_swift"><source>Swift</source></trans-unit>
-			
+
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.hinweis_tx_qualinetfeuser_vereinsnummer"><source>Hinweis: Die BLSV-Vereinsnummer erfahren Sie bei Ihrem Verein</source></trans-unit>
+
+			<trans-unit id="error.1378735445"><source>Bitte geben Sie eine Vereinsnummer zwischen 10000 und 79999 ein!</source></trans-unit>			
+			<trans-unit id="error.1378735446"><source>Der Benutzername ist bereits vergeben. Bitte geben Sie einen anderen Benutzernamen an!</source></trans-unit>			
+			<trans-unit id="error.1378735447"><source>Bitte geben Sie eine gültige Übungsleiternummer an!</source></trans-unit>			
+			<trans-unit id="error.1378735448"><source>Bitte bestätigen Sie die AGB, Datenschutzbestimmungen und Widerrufsbelehrung!</source></trans-unit>			
 		</body>
 	</file>
 </xliff>
