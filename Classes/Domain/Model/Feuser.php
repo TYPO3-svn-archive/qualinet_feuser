@@ -487,6 +487,9 @@ class Feuser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
 	 */
 	public function setTxQualinetfeuserVereinsnummer($txQualinetfeuserVereinsnummer) {
 		$this->txQualinetfeuserVereinsnummer = $txQualinetfeuserVereinsnummer;
+
+		// get vereinsname from db
+		// $this->company = "";
 	}
 
 	/**
@@ -1735,6 +1738,5 @@ class Feuser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
 	public function getTxQualinetfeuserVereinsnummerPattern() {
 		return '^([1-7][0-9]{4})?$';
 	}
-	
 }
 ?>

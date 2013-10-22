@@ -108,12 +108,9 @@ $(document).ready(function () {
 
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.company" /></label>
-	<div class="field"><f:form.textfield property="company" additionalAttributes="{placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_company\' />'}" />
-		<span id="feuserVereinsname">xxx</span>
-	</div>
+	<div classe="field"><f:if condition="{feuser.company}">{feuser.company}</f:if></div>
 	<div class="clearer"></div>
 </div>
-
 
 <h3><f:translate key="tx_qualinetfeuser_domain_model_feuser.titel_kommunikation" /></h3>
 <div class="fieldset">
@@ -147,13 +144,6 @@ $(document).ready(function () {
 </div>
 
 <div class="fieldset">
-	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.freigabefahrgemeinschaft" /></label>
-	<div class="field"><f:form.checkbox property="freigabefahrgemeinschaft" value="1" /></div>
-	<div class="clearer"></div>
-</div>
-
-
-<div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.passbild" /></label>
 	
 	<div class="field">
@@ -170,18 +160,8 @@ $(document).ready(function () {
 	<label>&nbsp;</label>
 	<div class="field">
 		<div class="datenschutz">
-			<div class="datenschutzCheck"><f:form.checkbox property="txQualinetfeuserMailsvondritten" value="1" /></div>
-			<div class="datenschutzText"><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_mailsvondritten_text" /></div>
-		</div>
-		<br />
-		<div class="datenschutz">
-			<div class="datenschutzCheck"><f:form.checkbox property="txQualinetfeuserBlsvwerbung" value="1" /></div>
-			<div class="datenschutzText"><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_blsvwerbung_text" /></div>
-		</div>
-		<br />
-		<div class="datenschutz">
 			<div class="datenschutzCheck"><f:form.checkbox property="txQualinetfeuserDatenschutz" value="1" additionalAttributes="{required:'1'}" /></div>
-			<div class="datenschutzText">Die <a target="_blank" href="agb.html">AGB</a>, <a target="_blank" href="datenschutzbestimmungen.html">Datenschutzbestimmungen</a> und die <a target="_blank" href="widerrufsbelehrung.html">Widerrufsbelehrung</a> habe ich zur Kenntnis genommen</div>
+			<div class="datenschutzText">Die <a target="_blank" href="datenschutzbestimmungen.html">Datenschutzbestimmungen</a> habe ich zur Kenntnis genommen</div>
 		</div>
 	</div>
 	<div class="clearer"></div>

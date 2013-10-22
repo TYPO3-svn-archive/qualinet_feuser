@@ -131,6 +131,9 @@ class FeuserController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
 	 */
 	public function updateAction(\BLSV\QualinetFeuser\Domain\Model\Feuser $feuser) {
 		
+//		echo 'ok';
+//		exit;
+		
 		$this->feuserRepository->update($feuser);
 //		$this->feuserRepository->persistAll();
 		
