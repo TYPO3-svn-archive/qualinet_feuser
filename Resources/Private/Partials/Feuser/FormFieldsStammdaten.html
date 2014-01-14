@@ -31,8 +31,10 @@
 </div>
 
 <div class="fieldset">
-	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.date_of_birth" /> <span class="req"> *</span></label>
-	<div class="field"><f:form.textfield class="datepicker" property="dateOfBirth" value="<f:format.date format='d.m.Y'>{feuser.dateOfBirth}</f:format.date>" additionalAttributes="{required:'1', placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_date_of_birth\' />'}" /></div>
+	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.date_of_birth" /> <span class="req"> *</span></label> 
+	
+	
+	<div class="field"><f:form.textfield class="datepicker  <f:if condition=\"<f:format.date format='dmYhs'>{feuser.dateOfBirth}</f:format.date>=111119111200\" > color_red border_red</f:if>" property="dateOfBirth" value="<f:format.date format='d.m.Y'>{feuser.dateOfBirth}</f:format.date>" additionalAttributes="{required:'1', placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_date_of_birth\' />'}" /></div>
 	<div class="clearer"></div>
 </div>
 
@@ -158,6 +160,11 @@ $(document).ready(function () {
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.email" /> <span class="req"> *</span></label>
 	<div class="field"><f:form.textfield property="email" additionalAttributes="{required:'1', placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_email\' />'}" /></div>
+	<div class="clearer"></div>
+</div>
+<div class="fieldset">
+	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.emailwiederholung" /> <span class="req"> *</span></label>
+	<div class="field"><f:form.textfield name="emailwiederholung" additionalAttributes="{required:'1', placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_email\' />'}" /></div>
 	<div class="clearer"></div>
 </div>
 

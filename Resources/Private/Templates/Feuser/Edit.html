@@ -30,7 +30,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
 		<f:if condition="{feuser.txQualinetfeuserReferentennr}">
 			<f:then>
 				<f:render partial="Feuser/FormFieldsReferent" arguments="{feuser:feuser, options:options}" />
-				<div class="fieldset"><f:form.submit value="Referentendaten speichern" /></div>
+				<div class="fieldset"><f:form.submit value="Stammdaten speichern" /></div>
 			</f:then>
 			<f:else>
 				<f:render partial="Feuser/FormFieldsStammdaten" arguments="{feuser:feuser, options:options}" />

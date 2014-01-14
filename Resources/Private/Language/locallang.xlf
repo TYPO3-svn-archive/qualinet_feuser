@@ -56,6 +56,7 @@
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.last_name"><source>Nachname</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.date_of_birth"><source>Geburtsdatum</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.email"><source>E-Mail</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.emailwiederholung"><source>E-Mail - Wiederholung</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.address"><source>Strasse</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.city"><source>Ort</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.zip"><source>Postleitzahl</source></trans-unit>
@@ -96,6 +97,7 @@
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ph_date_of_birth"><source>TT.MM.JJJJ</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ph_gender"><source>Anrede</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ph_tx_qualinetfeuser_uebungsleiterid"><source>Übungsleiternummer</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_vereinsmitglied"><source>Sind Sie Mitglied in einem BLSV-Verein</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ph_tx_qualinetfeuser_vereinsnummer"><source>BLSV-Vereinsnummer</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ph_company"><source>Vereinsname</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ph_ustid"><source>USt.IdNr.</source></trans-unit>
@@ -115,7 +117,7 @@
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ph_tx_qualinetfeuser_iban"><source>IBAN</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ph_tx_qualinetfeuser_swift"><source>Swift</source></trans-unit>
 
-			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.hinweis_tx_qualinetfeuser_vereinsnummer"><source>Hinweis: Die BLSV-Vereinsnummer erfahren Sie bei Ihrem Verein</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.hinweis_tx_qualinetfeuser_vereinsnummer"><source>Hinweis: Die 5-stellige Vereinsnummer erfahren Sie bei Ihrem Verein</source></trans-unit>
 
 			<trans-unit id="error.1378735445"><source>Bitte geben Sie eine Vereinsnummer zwischen 10000 und 79999 ein!</source></trans-unit>			
 			<trans-unit id="error.1378735446"><source>Der Benutzername ist bereits vergeben. Bitte geben Sie einen anderen Benutzernamen an!</source></trans-unit>			

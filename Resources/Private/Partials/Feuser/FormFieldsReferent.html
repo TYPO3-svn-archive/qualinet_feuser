@@ -24,7 +24,7 @@
 </div>
 
 <div class="fieldset">
-	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.address" />
+	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.address" /></label>
 	<div class="field"><f:form.textfield property="address" additionalAttributes="{
 		required:'1' 
 		placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_address\' />'
@@ -65,14 +65,30 @@
 
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_uebungsleiterid" /></label>
-	<div class="field">BY-<f:form.textfield type="number" property="txQualinetfeuserUebungsleiterid" additionalAttributes="{min: 10000, max:79999, placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_tx_qualinetfeuser_uebungsleiterid\' />'}" /></div>
+	<div class="field">BY-<f:form.textfield class="small" type="number" property="txQualinetfeuserUebungsleiterid" additionalAttributes="{min: 10000, max:79999, placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_tx_qualinetfeuser_uebungsleiterid\' />'}" /></div>
+	<div class="clearer"></div>
+</div>
+
+<div class="fieldset">
+	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_vereinsmitglied" /></label>
+		<div class="field"><f:form.radio name="mitglied" value="1" /> <span> ja</span> &nbsp;&nbsp;&nbsp;&nbsp;<f:form.radio name="mitglied" value="0" /> <span>nein</span></div>
 	<div class="clearer"></div>
 </div>
 
 <div class="fieldset">
 	<label><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_vereinsnummer" /></label>
-	<div class="field">
-		<f:form.textfield property="txQualinetfeuserVereinsnummer" additionalAttributes="{min: 10000, max:79999, placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_tx_qualinetfeuser_vereinsnummer\' />'}" />
+	<div class="field"> <span class="vereinsv">V-</span> 
+		<f:form.textfield id="feuserTxQualinetfeuserVereinsnummer" 
+		    class="small"
+			type="text" 
+			property="txQualinetfeuserVereinsnummer" 
+			additionalAttributes="{
+				pattern:'{feuser.txQualinetfeuserVereinsnummerPattern}',
+				data-errormessage: '<f:translate key=\'error.1378735445\' />',
+				placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_tx_qualinetfeuser_vereinsnummer\' />'
+			}"
+
+		/>
 		&nbsp;<f:translate key="tx_qualinetfeuser_domain_model_feuser.hinweis_tx_qualinetfeuser_vereinsnummer" />
 	</div>
 	<div class="clearer"></div>
@@ -80,7 +96,7 @@
 
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.company" /></label>
-	<div classe="field"><f:if condition="{feuser.company}">{feuser.company}</f:if></div>
+	<div class="field"><f:if condition="{feuser.company}">{feuser.company}</f:if></div>
 	<div class="clearer"></div>
 </div>
 
@@ -143,6 +159,12 @@
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.email" /> <span class="req"> *</span></label>
 	<div class="field"><f:form.textfield property="email" additionalAttributes="{required:'1', placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_email\' />'}" /></div>
+	<div class="clearer"></div>
+</div>
+
+<div class="fieldset">
+	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.emailwiederholung" /> <span class="req"> *</span></label>
+	<div class="field"><f:form.textfield name="emailwiederholung" additionalAttributes="{required:'1', placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_email\' />'}" /></div>
 	<div class="clearer"></div>
 </div>
 
@@ -212,3 +234,19 @@
 	</div>
 	<div class="clearer"></div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
