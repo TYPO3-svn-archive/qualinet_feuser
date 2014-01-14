@@ -72,17 +72,47 @@ jQuery( document ).ready(function( $ ) {
 		}
 	}
 	
-	
-	$( "#feuser" ).submit(function( event ) {
+	checkEmail = function (){
+		if( $('#email').val() != $('#emailwiederholung').val()  ){
+			return false;     	
+		}
+		else{
+			return true;			
+		}
 		
+	}
+	
+	$('#mitglied').click(function() {
+		$('#feuserTxQualinetfeuserVereinsnummer').prop('required', true );
+	});
+	
+	$('#nichtmitglied').click(function() {
+		$('#feuserTxQualinetfeuserVereinsnummer').prop('required', false );
+	});
+	
+	
+	$( "#feuser" ).submit(function( event ) {		
 		  if (  $('#vereinsname').html() == fehlerMeldung  ) {
 		  	alert( "Bitte geben Sie eine gültige Vereinsnummer ein oder lassen Sie das Feld leer." );
 		  	event.preventDefault();
 		  }
+		  
+		  if ( !checkEmail()  ) {
+			  	alert( "Sie haben unterschiedliche E-Mailadressen angegeben. Bitte überprüfen Sie Ihre Eingabe." );
+			  	event.preventDefault();
+			  }
 		});
 	
 	checkVereinsnummer();
+	$('#emailwiederholung').val( $('#email').val() );	
 	
+	if ( $('#feuserTxQualinetfeuserVereinsnummer').val() ) {
+		 $('#mitglied').attr('checked',1);
+		 $('#feuserTxQualinetfeuserVereinsnummer').prop('required', true);
+	}
+	else{
+		 $('#nichtmitglied').attr('checked',1);
+	}
 	
 });
 </script>

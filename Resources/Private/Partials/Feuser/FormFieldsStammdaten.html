@@ -65,7 +65,7 @@
 
 <div class="fieldset">
 	<label class="labelUebungsleiterid"> <f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_uebungsleiterid" /></label>
-	<div class="field">BY- <f:form.textfield type="text" property="txQualinetfeuserUebungsleiterid" 
+	<div class="field">&nbsp;BY-&nbsp;<f:form.textfield class="small" type="text" property="txQualinetfeuserUebungsleiterid" 
 		additionalAttributes="{
 			pattern:'[0-9]*',
 			data-errormessage: '<f:translate key=\'error.1378735447\' />',
@@ -77,10 +77,16 @@
 	<div class="clearer"></div>
 </div>
 
+<div class="fieldset"> 
+	<label > <f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_vereinsmitglied" /></label>
+		<div class="field"><f:form.radio id="mitglied" name="mitglied" value="1" /> <span> ja</span> &nbsp;&nbsp;&nbsp;&nbsp;<f:form.radio id="nichtmitglied" name="mitglied" value="0" /> <span>nein</span></div>
+	<div class="clearer"></div>
+</div>
+
 <div class="fieldset">
-	<label><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_vereinsnummer" /></label>
-	<div class="field">
-		<f:form.textfield id="feuserTxQualinetfeuserVereinsnummer" 
+	<label class="labelVereinsnummer" ><f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_vereinsnummer" /></label>
+	<div class="field"><span>&nbsp;&nbsp;&nbsp;V-</span>
+		<f:form.textfield class="small" id="feuserTxQualinetfeuserVereinsnummer" 
 			type="text" 
 			property="txQualinetfeuserVereinsnummer" 
 			additionalAttributes="{
@@ -159,12 +165,12 @@ $(document).ready(function () {
 
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.email" /> <span class="req"> *</span></label>
-	<div class="field"><f:form.textfield property="email" additionalAttributes="{required:'1', placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_email\' />'}" /></div>
+	<div class="field"><f:form.textfield id="email" property="email" additionalAttributes="{required:'1', placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_email\' />'}" /></div>
 	<div class="clearer"></div>
 </div>
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.emailwiederholung" /> <span class="req"> *</span></label>
-	<div class="field"><f:form.textfield name="emailwiederholung" additionalAttributes="{required:'1', placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_email\' />'}" /></div>
+	<div class="field"><f:form.textfield id="emailwiederholung" name="emailwiederholung" additionalAttributes="{required:'1', placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_email\' />'}" /></div>
 	<div class="clearer"></div>
 </div>
 
@@ -201,33 +207,3 @@ $(document).ready(function () {
 	Die mit Sternchen (<span class="req">*</span>) versehenen Felder müssen ausgefüllt werden.<br />
 	<br />
 </div>
-
-
-<script>
-jQuery( document ).ready(function( $ ) {
-	$('#feuserTxQualinetfeuserVereinsnummer').keyup(function(){
-		checkVereinsnummer();
-	});
-	
-	checkVereinsnummer = function (){
-		if( $('#feuserTxQualinetfeuserVereinsnummer').val().length > 4 ){
-		   url='vereinssuche.html?tx_blsvbestammdaten_vereinsnamen[vereinsnummer]=' +  $('#feuserTxQualinetfeuserVereinsnummer').val();
-		   var jqxhr = $.ajax(  url  )
-		     var jqxhr = $.ajax(  url  )
-		     .done( function( data ) {
-		       if (!data) {
-		         data ='<span class="color_red">keine gültige Vereinsnummer</span>'; 
-		       }
-		       $('#vereinsname').html( data );
-		     });  
-		   }
-		  else {
-		     $('#vereinsname').html( '<span class="color_red">keine gültige Vereinsnummer</span>');
-		 }
-	}
-	
-	checkVereinsnummer();
-	
-	
-});
-</script>
