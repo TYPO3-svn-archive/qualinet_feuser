@@ -49,7 +49,7 @@ class OptionsService {
 	
 	public function getGender(){
 		$gender = array(
-			99 => \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('tx_qualinetfeuser_domain_model_feuser.gender_99', 'qualinetFeuser'),
+			'' => \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('tx_qualinetfeuser_domain_model_feuser.gender_99', 'qualinetFeuser'),
 			0 => \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('tx_qualinetfeuser_domain_model_feuser.gender_0', 'qualinetFeuser'),
 			1 => \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('tx_qualinetfeuser_domain_model_feuser.gender_1', 'qualinetFeuser'),
 		);

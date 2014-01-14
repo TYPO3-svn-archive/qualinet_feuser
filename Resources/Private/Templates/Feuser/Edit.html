@@ -19,13 +19,13 @@ Otherwise your changes will be overwritten the next time you save the extension 
 	});
 </script>
 
-<h3><f:translate key="tx_qualinetfeuser_domain_model_feuser.titel_stammdaten" /></h3>
+
 
 <f:flashMessages class="flashMessages" />
 <f:render partial="FormErrors" arguments="{object:Feuser}"/>
 
 <div class="tx-keuserregister-pi1">
-	<f:form enctype="multipart/form-data" method="post" action="update" name="feuser" object="{feuser}" >
+	<f:form enctype="multipart/form-data" method="post" action="update" id="feuser" name="feuser" object="{feuser}" >
 	
 		<f:if condition="{feuser.txQualinetfeuserReferentennr}">
 			<f:then>
@@ -40,6 +40,52 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 	</f:form>
 </div>
+
+<script>
+jQuery( document ).ready(function( $ ) {
+	$('#feuserTxQualinetfeuserVereinsnummer').keyup(function(){
+		checkVereinsnummer();
+	});
+	var fehlerMeldung = '<span class="color_red">keine gültige Vereinsnummer</span>';
+	checkVereinsnummer = function (){
+		if($('#feuserTxQualinetfeuserVereinsnummer').val().length ==0 ){
+		      $('#vereinsname').html( '' );
+		}
+		else {
+		
+			if( $('#feuserTxQualinetfeuserVereinsnummer').val().length > 4 ){
+			   url='vereinssuche.html?tx_blsvbestammdaten_vereinsnamen[vereinsnummer]=' +  $('#feuserTxQualinetfeuserVereinsnummer').val();
+			   var jqxhr = $.ajax(  url  )
+			     var jqxhr = $.ajax(  url  )
+			     .done( function( data ) {
+			       if (!data) {
+			    	   $('#vereinsname').html( fehlerMeldung );		       
+			       }
+			       else{
+			    	   $('#vereinsname').html( data );
+			       }		      
+			     });  
+			   }
+			  else {
+			     $('#vereinsname').html( fehlerMeldung );
+			 }
+		}
+	}
+	
+	
+	$( "#feuser" ).submit(function( event ) {
+		
+		  if (  $('#vereinsname').html() == fehlerMeldung  ) {
+		  	alert( "Bitte geben Sie eine gültige Vereinsnummer ein oder lassen Sie das Feld leer." );
+		  	event.preventDefault();
+		  }
+		});
+	
+	checkVereinsnummer();
+	
+	
+});
+</script>
 
 
 </f:section>

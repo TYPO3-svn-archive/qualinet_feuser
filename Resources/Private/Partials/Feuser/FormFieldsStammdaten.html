@@ -1,9 +1,16 @@
 <h3><f:translate key="tx_qualinetfeuser_domain_model_feuser.titel_stammdaten_teilnehmer" /></h3>
 <div class="fieldset">
-	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.username" /></label>
-	<div class="field"><f:form.textfield property="username" additionalAttributes="{placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_username\' />'}" /></div>
+	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.username" /> <span class="req"> *</span></label>
+	<div class="field"><f:form.textfield property="username" additionalAttributes="{required:'1', placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_username\' />'}" /></div>
 	<div class="clearer"></div>
 </div>
+
+<div class="fieldset">
+	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.gender" /> <span class="req"> *</span></label>
+	<div class="field"><f:form.select property="gender" options="{options.gender}" additionalAttributes="{required:'1'}" /></div>
+	<div class="clearer"></div>
+</div>
+
 
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.title" /></label>
@@ -12,7 +19,7 @@
 </div>
 
 <div class="fieldset">
-	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.first_name" /></label>
+	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.first_name" /> <span class="req"> *</span></label>
 	<div class="field"><f:form.textfield property="firstName"  additionalAttributes="{required:'1', placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_first_name\' />'}" /></div>
 	<div class="clearer"></div>
 </div>
@@ -24,20 +31,26 @@
 </div>
 
 <div class="fieldset">
-	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.address" /></label>
-	<div class="field"><f:form.textfield property="address" additionalAttributes="{placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_address\' />'}" /></div>
+	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.date_of_birth" /> <span class="req"> *</span></label>
+	<div class="field"><f:form.textfield class="datepicker" property="dateOfBirth" value="<f:format.date format='d.m.Y'>{feuser.dateOfBirth}</f:format.date>" additionalAttributes="{required:'1', placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_date_of_birth\' />'}" /></div>
 	<div class="clearer"></div>
 </div>
 
 <div class="fieldset">
-	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.zip" /></label>
-	<div class="field"><f:form.textfield property="zip" additionalAttributes="{placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_zip\' />'}" /></div>
+	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.address" /> <span class="req"> *</span></label>
+	<div class="field"><f:form.textfield property="address" additionalAttributes="{required:'1', placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_address\' />'}" /></div>
 	<div class="clearer"></div>
 </div>
 
 <div class="fieldset">
-	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.city" /></label>
-	<div class="field"><f:form.textfield property="city" additionalAttributes="{placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_city\' />'}" /></div>
+	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.zip" /> <span class="req"> *</span></label>
+	<div class="field"><f:form.textfield property="zip" additionalAttributes="{required:'1', placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_zip\' />'}" /></div>
+	<div class="clearer"></div>
+</div>
+
+<div class="fieldset">
+	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.city" /> <span class="req"> *</span></label>
+	<div class="field"><f:form.textfield property="city" additionalAttributes="{required:'1', placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_city\' />'}" /></div>
 	<div class="clearer"></div>
 </div>
 
@@ -47,21 +60,10 @@
 	<div class="clearer"></div>
 </div>
 
-<div class="fieldset">
-	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.date_of_birth" /> <span class="req"> *</span></label>
-	<div class="field"><f:form.textfield class="datepicker" property="dateOfBirth" value="<f:format.date format='d.m.Y'>{feuser.dateOfBirth}</f:format.date>" additionalAttributes="{required:'1', placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_date_of_birth\' />'}" /></div>
-	<div class="clearer"></div>
-</div>
 
 <div class="fieldset">
-	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.gender" /></label>
-	<div class="field"><f:form.select property="gender" options="{options.gender}" /></div>
-	<div class="clearer"></div>
-</div>
-
-<div class="fieldset">
-	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_uebungsleiterid" /></label>
-	<div class="field">BY-<f:form.textfield type="text" property="txQualinetfeuserUebungsleiterid" 
+	<label class="labelUebungsleiterid"> <f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_uebungsleiterid" /></label>
+	<div class="field">BY- <f:form.textfield type="text" property="txQualinetfeuserUebungsleiterid" 
 		additionalAttributes="{
 			pattern:'[0-9]*',
 			data-errormessage: '<f:translate key=\'error.1378735447\' />',
@@ -107,27 +109,49 @@ $(document).ready(function () {
 </script>
 
 <div class="fieldset">
-	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.company" /></label>
-	<div classe="field"><f:if condition="{feuser.company}">{feuser.company}</f:if></div>
+	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.vereinsname" /></label>
+	<div classe="field"><span id="vereinsname"></span></div>
 	<div class="clearer"></div>
 </div>
 
 <h3><f:translate key="tx_qualinetfeuser_domain_model_feuser.titel_kommunikation" /></h3>
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.telephone" /></label>
-	<div class="field"><f:form.textfield property="telephone" additionalAttributes="{placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_telephone\' />'}" /></div>
+	<div class="field"><f:form.textfield 
+		property="telephone" 
+		additionalAttributes="{
+			pattern:'{feuser.telefonPattern}',
+			data-errormessage: '<f:translate key=\'error.1383043295\' />',
+			placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_telephone\' />'
+		}" />
+	</div>
+	
 	<div class="clearer"></div>
 </div>
 
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.tx_qualinetfeuser_mobil" /></label>
-	<div class="field"><f:form.textfield property="txQualinetfeuserMobil" additionalAttributes="{placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_tx_qualinetfeuser_mobil\' />'}" /></div>
+	<div class="field"><f:form.textfield 
+		property="txQualinetfeuserMobil" 
+		additionalAttributes="{
+			pattern:'{feuser.telefonPattern}',
+			data-errormessage: '<f:translate key=\'error.1383043295\' />',
+			placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_tx_qualinetfeuser_mobil\' />'
+		}" />
+	</div>
 	<div class="clearer"></div>
 </div>
 
 <div class="fieldset">
 	<label> <f:translate key="tx_qualinetfeuser_domain_model_feuser.fax" /></label>
-	<div class="field"><f:form.textfield property="fax" additionalAttributes="{placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_fax\' />'}" /></div>
+	<div class="field"><f:form.textfield 
+		property="fax" 
+		additionalAttributes="{
+			pattern:'{feuser.telefonPattern}',
+			data-errormessage: '<f:translate key=\'error.1383043295\' />',
+			placeholder: '<f:translate key=\'tx_qualinetfeuser_domain_model_feuser.ph_fax\' />'
+		}" />
+	</div>
 	<div class="clearer"></div>
 </div>
 
@@ -157,12 +181,46 @@ $(document).ready(function () {
 
 <h3><f:translate key="tx_qualinetfeuser_domain_model_feuser.titel_datenschutz" /></h3>
 <div class="fieldset">
-	<label>&nbsp;</label>
 	<div class="field">
 		<div class="datenschutz">
-			<div class="datenschutzCheck"><f:form.checkbox property="txQualinetfeuserDatenschutz" value="1" additionalAttributes="{required:'1'}" /></div>
-			<div class="datenschutzText">Die <a target="_blank" href="datenschutzbestimmungen.html">Datenschutzbestimmungen</a> habe ich zur Kenntnis genommen</div>
+			<div class="datenschutzCheck"><f:form.checkbox property="txQualinetfeuserDatenschutz" value="1" additionalAttributes="{required:'1'}" /> Die <a target="_blank" href="datenschutzbestimmungen.html">Datenschutzbestimmungen</a> habe ich zur Kenntnis genommen</div>
 		</div>
 	</div>
 	<div class="clearer"></div>
 </div>
+
+<div>
+	<br />
+	Die mit Sternchen (<span class="req">*</span>) versehenen Felder müssen ausgefüllt werden.<br />
+	<br />
+</div>
+
+
+<script>
+jQuery( document ).ready(function( $ ) {
+	$('#feuserTxQualinetfeuserVereinsnummer').keyup(function(){
+		checkVereinsnummer();
+	});
+	
+	checkVereinsnummer = function (){
+		if( $('#feuserTxQualinetfeuserVereinsnummer').val().length > 4 ){
+		   url='vereinssuche.html?tx_blsvbestammdaten_vereinsnamen[vereinsnummer]=' +  $('#feuserTxQualinetfeuserVereinsnummer').val();
+		   var jqxhr = $.ajax(  url  )
+		     var jqxhr = $.ajax(  url  )
+		     .done( function( data ) {
+		       if (!data) {
+		         data ='<span class="color_red">keine gültige Vereinsnummer</span>'; 
+		       }
+		       $('#vereinsname').html( data );
+		     });  
+		   }
+		  else {
+		     $('#vereinsname').html( '<span class="color_red">keine gültige Vereinsnummer</span>');
+		 }
+	}
+	
+	checkVereinsnummer();
+	
+	
+});
+</script>

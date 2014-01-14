@@ -130,17 +130,14 @@ class FeuserController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
 	 * @return void
 	 */
 	public function updateAction(\BLSV\QualinetFeuser\Domain\Model\Feuser $feuser) {
-		
-//		echo 'ok';
-//		exit;
-		
+			
 		$this->feuserRepository->update($feuser);
 //		$this->feuserRepository->persistAll();
 		
 		$this->flashMessageContainer->add('Die Daten wurden aktualisiert');
 
-//		$this->redirect('edit');
-		$this->redirectToUri('myqualinet.html?active=0');		
+		$this->redirect('edit');
+		//$this->redirectToUri('myqualinet.html?active=0');		
 	}
 
 	/**

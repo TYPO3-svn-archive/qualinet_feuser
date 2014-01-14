@@ -152,6 +152,7 @@ class Feuser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
 	 * Fax Arbeit
 	 *
 	 * @var \string
+	 * @validate BLSV\QualinetFeuser\Domain\Validator\TelefonValidator 
 	 */
 	protected $txQualinetfeuserFaxarbeit;
 
@@ -159,6 +160,7 @@ class Feuser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
 	 * Mobil
 	 *
 	 * @var \string
+	 * @validate BLSV\QualinetFeuser\Domain\Validator\TelefonValidator 
 	 */
 	protected $txQualinetfeuserMobil;
 
@@ -187,6 +189,7 @@ class Feuser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
 	 * Telefon Arbeit
 	 *
 	 * @var \string
+	 * @validate BLSV\QualinetFeuser\Domain\Validator\TelefonValidator 
 	 */
 	protected $txQualinetfeuserTelarbeit;
 
@@ -362,6 +365,7 @@ class Feuser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
 	 * Telefon
 	 *
 	 * @var \string
+	 * @validate BLSV\QualinetFeuser\Domain\Validator\TelefonValidator 
 	 */
 	protected $telephone;
 
@@ -369,6 +373,7 @@ class Feuser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
 	 * Fax
 	 *
 	 * @var \string
+	 * @validate BLSV\QualinetFeuser\Domain\Validator\TelefonValidator 
 	 */
 	protected $fax;
 
@@ -1737,6 +1742,15 @@ class Feuser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
 	 */
 	public function getTxQualinetfeuserVereinsnummerPattern() {
 		return '^([1-7][0-9]{4})?$';
+	}
+
+	/**
+	 * Returns the Telefon pattern
+	 *
+	 * @return \string $telefonPattern
+	 */
+	public function getTelefonPattern() {
+		return '^([0-9 ]*)(\/[0-9| ][0-9 ]*)?(\-[0-9| ][0-9 ]*)?$';
 	}
 }
 ?>

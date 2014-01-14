@@ -56,14 +56,14 @@
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.last_name"><source>Nachname</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.date_of_birth"><source>Geburtsdatum</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.email"><source>E-Mail</source></trans-unit>
-			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.address"><source>Adresse</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.address"><source>Strasse</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.city"><source>Ort</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.zip"><source>Postleitzahl</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.telephone"><source>Telefon</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.fax"><source>Fax</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.title"><source>Titel</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.country"><source>Länder-/Regionscode</source></trans-unit>
-			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.company"><source>Vereinsname</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.vereinsname"><source>Vereinsname</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.www"><source>Homepage</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ustidben"><source>USt.IdNr. benötigt:</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ustid"><source>USt.IdNr.</source></trans-unit>
@@ -89,7 +89,7 @@
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ph_title"><source>Titel</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ph_first_name"><source>Vorname</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ph_last_name"><source>Nachname</source></trans-unit>
-			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ph_address"><source>Adresse</source></trans-unit>
+			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ph_address"><source>Strasse</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ph_zip"><source>Postleitzahl</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ph_city"><source>Ort</source></trans-unit>
 			<trans-unit id="tx_qualinetfeuser_domain_model_feuser.ph_country"><source>Länder-/Regionscode</source></trans-unit>
@@ -120,7 +120,10 @@
 			<trans-unit id="error.1378735445"><source>Bitte geben Sie eine Vereinsnummer zwischen 10000 und 79999 ein!</source></trans-unit>			
 			<trans-unit id="error.1378735446"><source>Der Benutzername ist bereits vergeben. Bitte geben Sie einen anderen Benutzernamen an!</source></trans-unit>			
 			<trans-unit id="error.1378735447"><source>Bitte geben Sie eine gültige Übungsleiternummer an!</source></trans-unit>			
-			<trans-unit id="error.1378735448"><source>Bitte bestätigen Sie die AGB, Datenschutzbestimmungen und Widerrufsbelehrung!</source></trans-unit>			
+			<trans-unit id="error.1378735448"><source>Bitte bestätigen Sie die AGB, Datenschutzbestimmungen und Widerrufsbelehrung!</source></trans-unit>
+			<trans-unit id="error.1378735448"><source>Bitte bestätigen Sie die AGB, Datenschutzbestimmungen und Widerrufsbelehrung!</source></trans-unit>
+			<trans-unit id="error.1383043295"><source>Bitte geben Sie eine gültige Telefonnummer ein!</source></trans-unit>
+						
 		</body>
 	</file>
 </xliff>

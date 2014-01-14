@@ -20,13 +20,13 @@ $EM_CONF[$_EXTKEY] = array(
 	'priority' => '',
 	'module' => '',
 	'state' => 'beta',
-	'internal' => 'tx_extbase_type=0 als Standart definiert',
+	'internal' => 'Vereinsüberprüfung',
 	'uploadfolder' => '0',
 	'createDirs' => '',
 	'modify_tables' => '',
 	'clearCacheOnLoad' => 0,
 	'lockType' => '',
-	'version' => '1.2.2',
+	'version' => '1.2.5',
 	'constraints' => array(
 		'depends' => array(
 			'extbase' => '6.0',
