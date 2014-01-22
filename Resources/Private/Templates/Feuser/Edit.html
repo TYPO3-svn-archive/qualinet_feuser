@@ -82,6 +82,18 @@ jQuery( document ).ready(function( $ ) {
 		
 	}
 	
+
+	checkMitglied = function () {
+	    var mitglied = document.getElementsByName("tx_qualinetfeuser_pi1[mitglied]");
+	    var mitgliedValid = false;
+	    var i = 0;
+	    while (!mitgliedValid && i < mitglied.length) {
+	        if (mitglied[i].checked) mitgliedValid = true;
+	        i++;        
+	    }
+	    return mitgliedValid;
+	}
+	
 	$('#mitglied').click(function() {
 		$('#feuserTxQualinetfeuserVereinsnummer').prop('required', true );
 	});
@@ -95,12 +107,20 @@ jQuery( document ).ready(function( $ ) {
 		  if (  $('#vereinsname').html() == fehlerMeldung  ) {
 		  	alert( "Bitte geben Sie eine gültige Vereinsnummer ein oder lassen Sie das Feld leer." );
 		  	event.preventDefault();
+			$( "#feuserTxQualinetfeuserVereinsnummer" ).focus();
 		  }
 		  
 		  if ( !checkEmail()  ) {
 			  	alert( "Sie haben unterschiedliche E-Mailadressen angegeben. Bitte überprüfen Sie Ihre Eingabe." );
 			  	event.preventDefault();
+				$( "#emailwiederholung" ).focus();
 			  }
+		  
+		  if ( !checkMitglied()  ) {
+			  	alert( "Sie müssen angeben, ob Sie Mitglied sind oder nicht. Bitte überprüfen Sie Ihre Eingabe." );
+			  	event.preventDefault();
+			  	$( "#mitglied" ).focus();
+			  } 
 		});
 	
 	checkVereinsnummer();
