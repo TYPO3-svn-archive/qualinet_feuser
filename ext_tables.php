@@ -558,9 +558,10 @@ $tmp_qualinet_feuser_columns = array(
 t3lib_extMgm::addTCAcolumns('fe_users',$tmp_qualinet_feuser_columns);
 
 $TCA['fe_users']['columns'][$TCA['fe_users']['ctrl']['type']]['config']['items'][] = array('LLL:EXT:qualinet_feuser/Resources/Private/Language/locallang_db.xlf:fe_users.tx_extbase_type.Tx_QualinetFeuser_Feuser','Tx_QualinetFeuser_Feuser');
-
 $TCA['fe_users']['types']['Tx_QualinetFeuser_Feuser']['showitem'] = $TCA['fe_users']['types']['1']['showitem'];
 $TCA['fe_users']['types']['Tx_QualinetFeuser_Feuser']['showitem'] .= ',--div--;LLL:EXT:qualinet_feuser/Resources/Private/Language/locallang_db.xlf:tx_qualinetfeuser_domain_model_feuser,';
 $TCA['fe_users']['types']['Tx_QualinetFeuser_Feuser']['showitem'] .= 'tx_qualinetfeuser_vereinsnummer, tx_qualinetfeuser_uebungsleiterid, tx_qualinetfeuser_kontonr, tx_qualinetfeuser_blz, tx_qualinetfeuser_bankname, tx_qualinetfeuser_mailsvondritten, tx_qualinetfeuser_bankeinzug, tx_qualinetfeuser_strasse, tx_qualinetfeuser_zusatz, tx_qualinetfeuser_strassearbeit, tx_qualinetfeuser_gesperrt, tx_qualinetfeuser_stadtarbeit, tx_qualinetfeuser_kontaktnr, tx_qualinetfeuser_email2, tx_qualinetfeuser_emailarbeit, tx_qualinetfeuser_blsvmitarbeiter, tx_qualinetfeuser_faxarbeit, tx_qualinetfeuser_mobil, tx_qualinetfeuser_referentennr, tx_qualinetfeuser_pager, tx_qualinetfeuser_telprivat, tx_qualinetfeuser_telarbeit, tx_qualinetfeuser_plzarbeit, tx_qualinetfeuser_beschreibung, tx_qualinetfeuser_refvertragversendet, tx_qualinetfeuser_beschreibungkurz, tx_qualinetfeuser_umsatzsteuerid, tx_qualinetfeuser_kreditorid, tx_qualinetfeuser_durchwahl, tx_qualinetfeuser_teilnehmerid, tx_qualinetfeuser_iban, tx_qualinetfeuser_swift, tx_qualinetfeuser_blsvwerbung, tx_qualinetfeuser_ehrenamt, tx_qualinetfeuser_hauptamt, tx_qualinetfeuser_datenschutz, username, gender, first_name, last_name, date_of_birth, email, address, city, zip, telephone, fax, title, country';
-
+$TCA['fe_users']['ctrl']['label'] = 'name';
+$TCA['fe_users']['ctrl']['label_alt'] = 'date_of_birth, username';
+$TCA['fe_users']['ctrl']['label_alt_force'] = 1;
 ?>
