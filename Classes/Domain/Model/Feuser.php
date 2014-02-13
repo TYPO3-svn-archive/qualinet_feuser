@@ -1290,15 +1290,7 @@ class Feuser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
 		return $this->firstName;
 	}
 
-	/**
-	 * Sets the firstName
-	 *
-	 * @param \string $firstName
-	 * @return void
-	 */
-	public function setFirstName($firstName) {
-		$this->firstName = $firstName;
-	}
+	
 
 	/**
 	 * Returns the lastName
@@ -1309,15 +1301,7 @@ class Feuser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
 		return $this->lastName;
 	}
 
-	/**
-	 * Sets the lastName
-	 *
-	 * @param \string $lastName
-	 * @return void
-	 */
-	public function setLastName($lastName) {
-		$this->lastName = $lastName;
-	}
+	
 
 	/**
 	 * Returns the dateOfBirth
@@ -1753,5 +1737,32 @@ class Feuser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
 	public function getTelefonPattern() {
 		return '^([0-9 ]*)(\/[0-9| ][0-9 ]*)?(\-[0-9| ][0-9 ]*)?$';
 	}
+	
+	/**
+	 * 
+	 */
+	public function updateName(){
+		$this->name = trim ($this->firstName . ' ' . $this->lastName);
+	}
+	
+	/**
+	 * 
+	 * @param string $name
+	 */
+	public function setFirstName($firstName) {
+		   $this->firstName = $firstName;
+		   $this->updateName();
+	 }
+	 
+	 /**
+	  *
+	  * @param string $lastName
+	  */
+	 public function setLastName($lastName) {
+	 	$this->lastName = $lastName;
+	 	$this->updateName();
+	 }
+	
+	
 }
 ?>
